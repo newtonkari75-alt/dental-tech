@@ -31,6 +31,10 @@
     <meta name="description" content="AutoBrush® Adults is an ADA-accepted U-shaped electric toothbrush engineered for a fast, full-mouth clean in 30 seconds. Patented nylon bristles, optimized pressure & angle, and LED modes for whitening support and gentle gum care. 30-day guarantee." />
     <meta name="keywords" content="AutoBrush, AutoBrush Adults, u-shaped toothbrush, ADA accepted toothbrush, 30 second toothbrush, full mouth toothbrush, electric toothbrush for sensitive gums, plaque removal toothbrush, gumline cleaning, LED whitening toothbrush, patented nylon bristles, brush head size guide" />
 
+    <!-- Favicon (Configurado para a pasta images) -->
+    <link rel="icon" type="image/png" href="images/favconnn.png">
+    <link rel="apple-touch-icon" href="images/favconnn.png">
+
     <!-- Open Graph -->
     <meta property="og:type" content="product" />
     <meta property="og:site_name" content="OralCleanTech" />
@@ -109,8 +113,18 @@
                         body: ['Inter', 'sans-serif'],
                     },
                     colors: {
-                        brand: { 950: '#0F172A', 900: '#1E293B', 800: '#334155', 700: '#475569', 50: '#F8FAFC' },
-                        accent: { 500: '#95DAB7', 600: '#7CCDA4', 400: '#B2E7CC' }
+                        brand: {
+                            950: '#0F172A', 
+                            900: '#1E293B',
+                            800: '#334155',
+                            700: '#475569',
+                            50: '#F8FAFC'
+                        },
+                        accent: {
+                            500: '#95DAB7', // Verde Menta Principal
+                            600: '#7CCDA4', 
+                            400: '#B2E7CC'
+                        }
                     }
                 }
             }
@@ -140,7 +154,7 @@
 <body class="flex flex-col min-h-screen overflow-x-hidden">
     <div class="cinematic-noise" aria-hidden="true"></div>
 
-    <!-- Alert Bar -->
+    <!-- Alert Bar (North American Compliance) -->
     <div class="bg-brand-950 text-white text-center py-2 px-4 z-50 relative border-b border-white/5">
         <div class="max-w-7xl mx-auto flex justify-center items-center gap-2 font-bold text-[10px] md:text-[13px] tracking-widest uppercase">
             <i class="fa-solid fa-shield-check text-accent-500"></i>
@@ -148,7 +162,7 @@
         </div>
     </div>
 
-    <!-- Header (Mobile Centered) -->
+    <!-- Header (Mobile Optimized) -->
     <nav class="glass-nav sticky top-0 z-40 px-4 py-3 md:py-5 w-full">
         <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-center md:justify-between items-center gap-4">
             <div class="flex items-center justify-center w-full md:w-auto">
@@ -209,14 +223,14 @@
                 <div class="hidden lg:flex relative reveal justify-center items-center order-1 lg:order-2">
                     <div class="absolute w-[110%] h-[110%] bg-accent-500/10 rounded-full blur-[120px]"></div>
                     <div class="relative z-10 w-full max-w-[550px] animate-float">
-                        <img src="images/autobrush.png" alt="AutoBrush 360" class="w-full h-auto drop-shadow-[0_60px_100px_rgba(15,23,42,0.15)] object-contain rounded-[60px]">
+                        <img src="images/autobrush.png" alt="AutoBrush 360 Cleaning" class="w-full h-auto drop-shadow-[0_60px_100px_rgba(15,23,42,0.15)] object-contain rounded-[60px]">
                     </div>
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- Gateway (Order Now First Mobile) -->
+    <!-- Gateway (Optimized Mobile Order) -->
     <section id="gateway" class="py-16 md:py-32 bg-slate-50 relative">
         <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
             <div class="text-center max-w-2xl mx-auto mb-12 lg:mb-16 reveal">
@@ -226,27 +240,27 @@
                 <p class="text-brand-600 font-medium uppercase tracking-widest text-[10px]">Choose the path that fits your routine.</p>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 max-w-5xl mx-auto">
-                <!-- Card Direct Purchase -->
-                <div class="order-1 md:order-2 bg-accent-500 rounded-[40px] p-8 lg:p-10 flex flex-col reveal shadow-2xl relative border border-accent-600/20">
+                <!-- Direct Purchase -->
+                <div class="order-1 md:order-2 bg-accent-500 rounded-[40px] p-8 lg:p-10 flex flex-col reveal shadow-2xl transition-all duration-500 relative border border-accent-600/20">
                     <div class="bg-brand-950 text-white w-14 h-14 rounded-2xl flex items-center justify-center mb-8 shadow-lg">
                         <i class="fa-solid fa-bolt text-2xl text-accent-500"></i>
                     </div>
-                    <h3 class="font-display text-2xl font-black text-brand-950 mb-4 uppercase tracking-tight">READY FOR A SMARTER CLEAN?</h3>
-                    <p class="text-brand-900 font-medium text-[14px] lg:text-[15px] leading-relaxed mb-10 flex-grow">
-                        Skip the research and experience the future of brushing today. Tracked shipping to U.S. & Canada and 30-day risk-free guarantee.
+                    <h3 class="font-display text-2xl font-black text-brand-950 mb-4 uppercase tracking-tight text-center md:text-left">READY FOR A SMARTER CLEAN?</h3>
+                    <p class="text-brand-900 font-medium text-[14px] lg:text-[15px] leading-relaxed mb-10 flex-grow text-center md:text-left">
+                        Skip the research and experience the future of brushing today. Tracked shipping to U.S. & Canada and 30-day risk-free guarantee included.
                     </p>
-                    <a href="https://www.fasttrack37.com/PM7HK3TH/2SS8XSX7/" class="btn-magnetic w-full text-center bg-brand-950 text-white font-black py-4 lg:py-5 rounded-[20px] tracking-widest uppercase text-xs lg:text-sm shadow-xl hover:bg-brand-900 flex items-center justify-center gap-2">
+                    <a href="https://www.fasttrack37.com/PM7HK3TH/2SS8XSX7/" class="btn-magnetic w-full text-center bg-brand-950 text-white font-black py-4 lg:py-5 rounded-[20px] tracking-widest uppercase text-xs lg:text-sm shadow-xl hover:bg-brand-900 transition-colors flex items-center justify-center gap-2">
                         ORDER NOW - 40% OFF <i class="fa-solid fa-arrow-right"></i>
                     </a>
                 </div>
-                <!-- Card Educational -->
-                <div class="order-2 md:order-1 bg-white border border-slate-200 rounded-[40px] p-8 lg:p-10 flex flex-col reveal hover:shadow-2xl transition-all group">
+                <!-- Educational Path -->
+                <div class="order-2 md:order-1 bg-white border border-slate-200 rounded-[40px] p-8 lg:p-10 flex flex-col reveal hover:shadow-2xl transition-all duration-500 group">
                     <div class="bg-slate-50 text-brand-950 w-16 h-16 rounded-2xl flex items-center justify-center mb-8 border border-slate-100">
                         <i class="fa-solid fa-book-open text-2xl"></i>
                     </div>
-                    <h3 class="font-display text-2xl font-black text-brand-950 mb-4 uppercase tracking-tight leading-tight">SEE WHY YOUR CURRENT BRUSHING IS FAILING</h3>
-                    <p class="text-brand-600 text-[14px] lg:text-[15px] leading-relaxed mb-10 flex-grow">
-                        Discover the science behind full-mouth cleaning and why standard techniques often leave plaque behind.
+                    <h3 class="font-display text-2xl font-black text-brand-950 mb-4 uppercase tracking-tight text-center md:text-left leading-tight">SEE WHY YOUR CURRENT BRUSHING IS FAILING</h3>
+                    <p class="text-brand-600 text-[14px] lg:text-[15px] leading-relaxed mb-10 flex-grow text-center md:text-left">
+                        Discover the science behind full-mouth cleaning and why standard techniques often leave stubborn plaque behind.
                     </p>
                     <a href="https://www.fasttrack37.com/PM7HK3TH/2SS8XSX7/?uid=50959" class="btn-magnetic w-full text-center bg-brand-950 text-white font-black py-4 lg:py-5 rounded-2xl tracking-widest uppercase text-xs lg:text-sm flex items-center justify-center gap-2">
                         READ THE FULL STORY <i class="fa-solid fa-arrow-right"></i>
@@ -282,11 +296,11 @@
         </div>
     </section>
 
-    <!-- FAQ SECTION (RESTORING ALL STRATEGIC QUESTIONS) -->
+    <!-- FAQ SECTION (Strategic & Intelligent) -->
     <section id="faq" class="py-20 lg:py-32 bg-slate-50">
         <div class="max-w-4xl mx-auto px-5 text-center">
             <div class="mb-16 reveal">
-                <h2 class="font-display text-[32px] md:text-[48px] font-black text-brand-950 mb-6 tracking-tighter uppercase italic leading-none">
+                <h2 class="font-display text-[32px] md:text-[48px] font-black text-brand-950 mb-6 tracking-tighter uppercase italic leading-none text-center">
                     Expert Answers to Your <br class="hidden md:block"> Oral Care Questions
                 </h2>
                 <p class="text-brand-600 font-medium uppercase tracking-widest text-[10px]">In-depth insights into the only ADA-Accepted U-Shaped Technology.</p>
@@ -301,8 +315,8 @@
                         </h4>
                         <i class="fa-solid fa-chevron-down faq-icon text-accent-600 transition-transform duration-300"></i>
                     </div>
-                    <div class="faq-answer px-6 lg:px-8 bg-white text-brand-700 text-sm lg:text-base leading-relaxed text-left font-medium">
-                        <p>Standard electric brushes clean one tooth at a time. AutoBrush® cleans all teeth simultaneously. Clinical studies show it removes up to 5.1X more plaque than manual brushing by ensuring perfect coverage across every dental surface in just 30 seconds.</p>
+                    <div class="faq-answer px-6 lg:px-8 bg-white border-t border-slate-100 text-brand-700 text-sm lg:text-base leading-relaxed text-left font-medium">
+                        <p>Standard electric brushes clean one tooth at a time, requiring 2 minutes of moving the head across all surfaces. AutoBrush® cleans all teeth simultaneously. Clinical studies show it removes up to 5.1X more plaque than manual brushing by ensuring perfect coverage across every dental surface in just 30 seconds.</p>
                     </div>
                 </div>
 
@@ -314,8 +328,8 @@
                         </h4>
                         <i class="fa-solid fa-chevron-down faq-icon text-accent-600 transition-transform duration-300"></i>
                     </div>
-                    <div class="faq-answer px-6 lg:px-8 bg-white text-brand-700 text-sm lg:text-base leading-relaxed text-left font-medium">
-                        <p>Yes. AutoBrush® is currently the **only** U-shaped toothbrush to receive the ADA Seal of Acceptance. Many low-cost silicone copies have failed to meet the rigorous mechanical cleaning standards required by the ADA.</p>
+                    <div class="faq-answer px-6 lg:px-8 bg-white border-t border-slate-100 text-brand-700 text-sm lg:text-base leading-relaxed text-left font-medium">
+                        <p>Yes. AutoBrush® is currently the **only** U-shaped toothbrush to receive the ADA Seal of Acceptance. This is a crucial distinction, as many low-cost silicone copies on the market have failed to meet the rigorous mechanical cleaning standards required by the American Dental Association.</p>
                     </div>
                 </div>
 
@@ -327,8 +341,8 @@
                         </h4>
                         <i class="fa-solid fa-chevron-down faq-icon text-accent-600 transition-transform duration-300"></i>
                     </div>
-                    <div class="faq-answer px-6 lg:px-8 bg-white text-brand-700 text-sm lg:text-base leading-relaxed text-left font-medium">
-                        <p>Silicone is too soft and lacks the structure to remove hardened plaque. AutoBrush® uses medical-grade nylon bristles designed to clear gingival pockets and interdental spaces while being gentle on gums.</p>
+                    <div class="faq-answer px-6 lg:px-8 bg-white border-t border-slate-100 text-brand-700 text-sm lg:text-base leading-relaxed text-left font-medium">
+                        <p>Silicone is too soft and lacks the mechanical structure to effectively remove hardened plaque and biofilm. AutoBrush® utilizes patented medical-grade nylon bristles designed to clear the gingival pockets and interdental spaces, while still being gentle enough for sensitive gums.</p>
                     </div>
                 </div>
 
@@ -340,8 +354,8 @@
                         </h4>
                         <i class="fa-solid fa-chevron-down faq-icon text-accent-600 transition-transform duration-300"></i>
                     </div>
-                    <div class="faq-answer px-6 lg:px-8 bg-white text-brand-700 text-sm lg:text-base leading-relaxed text-left font-medium">
-                        <p>Absolutely. AutoBrush® features a sensitive mode and red-light therapy for gum support. It is highly effective for cleaning around orthodontic wires where traditional brushes leave food trapped.</p>
+                    <div class="faq-answer px-6 lg:px-8 bg-white border-t border-slate-100 text-brand-700 text-sm lg:text-base leading-relaxed text-left font-medium">
+                        <p>Absolutely. AutoBrush® features a sensitive mode and integrated red-light therapy for gum support. It is highly effective for cleaning around orthodontic wires and brackets, where traditional brushes often leave food particles trapped.</p>
                     </div>
                 </div>
 
@@ -349,12 +363,12 @@
                 <div class="faq-item border border-slate-200 rounded-[30px] bg-white overflow-hidden cursor-pointer transition-all duration-300 hover:border-accent-500 reveal shadow-sm" onclick="toggleFaq(this)">
                     <div class="faq-question flex justify-between items-center p-6 lg:p-8 text-left">
                         <h4 class="font-display font-black text-brand-950 text-sm lg:text-lg uppercase tracking-tight pr-4 leading-tight">
-                            Does it really work in only 30 seconds?
+                            Does it really provide a full clean in only 30 seconds?
                         </h4>
                         <i class="fa-solid fa-chevron-down faq-icon text-accent-600 transition-transform duration-300"></i>
                     </div>
-                    <div class="faq-answer px-6 lg:px-8 bg-white text-brand-700 text-sm lg:text-base leading-relaxed text-left font-medium">
-                        <p>Yes. Traditional brushing takes 2 minutes because you move from tooth to tooth. Since AutoBrush® brushes every surface simultaneously, a 30-second cycle provides more active brushing time per surface.</p>
+                    <div class="faq-answer px-6 lg:px-8 bg-white border-t border-slate-100 text-brand-700 text-sm lg:text-base leading-relaxed text-left font-medium">
+                        <p>Yes. Traditional brushing takes 2 minutes because you move from tooth to tooth. Since AutoBrush® brushes <strong>every surface of every tooth at the exact same time</strong>, a 30-second cycle provides more active brushing time per surface than standard methods.</p>
                     </div>
                 </div>
 
@@ -366,15 +380,15 @@
                         </h4>
                         <i class="fa-solid fa-chevron-down faq-icon text-accent-600 transition-transform duration-300"></i>
                     </div>
-                    <div class="faq-answer px-6 lg:px-8 bg-white text-brand-700 text-sm lg:text-base leading-relaxed text-left font-medium">
-                        <p>If you are not 100% satisfied after 30 days of consistent use, our North American support team will provide a full refund of the purchase price.</p>
+                    <div class="faq-answer px-6 lg:px-8 bg-white border-t border-slate-100 text-brand-700 text-sm lg:text-base leading-relaxed text-left font-medium">
+                        <p>We want you to be 100% confident in your smile. If you are not satisfied with your results after 30 days of consistent use, our North American support team will provide a full refund of the purchase price, no questions asked.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Final CTA Section (Inverted Green) -->
+    <!-- Final CTA Section -->
     <section class="py-20 lg:py-24 bg-accent-500 text-center text-brand-950 relative overflow-hidden">
         <div class="absolute inset-0 bg-white/10 blur-[150px] rounded-full translate-y-1/2"></div>
         <div class="max-w-4xl mx-auto px-5 relative z-10">
@@ -398,7 +412,7 @@
         <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 text-center md:text-left">
             <div class="flex flex-col md:flex-row justify-between items-center gap-10 mb-16">
                 <div class="flex flex-col items-center md:items-start">
-                    <img src="images/autobrush_Black-Black.webp" alt="AutoBrush" class="h-6 md:h-10 w-auto object-contain">
+                    <img src="images/autobrush_Black-Black.webp" alt="AutoBrush Authorized Distributor" class="h-6 md:h-10 w-auto object-contain">
                     <p class="text-[9px] font-black text-accent-600 mt-3 uppercase tracking-widest">Authorized Independent Distributor</p>
                 </div>
                 <div class="flex flex-wrap justify-center gap-6 lg:gap-8 text-[10px] lg:text-[12px] font-black uppercase tracking-widest text-brand-950">
@@ -408,10 +422,12 @@
                 </div>
             </div>
             <div class="border-t border-slate-100 pt-10 text-center">
-                <p class="max-w-4xl mx-auto text-[10px] lg:text-[11px] leading-relaxed text-slate-400 mb-8 italic">
-                    *Based on internal clinical study data. AutoBrush® is ADA-accepted and supported by clinical studies. This website is operated by an Authorized Independent Distributor. Individual results may vary.
+                <p class="max-w-4xl mx-auto text-[10px] lg:text-[11px] leading-relaxed text-slate-400 mb-8 italic text-slate-400">
+                    *Based on internal clinical study data. AutoBrush® is ADA-accepted and supported by clinical studies. This website is operated by an Authorized Independent Distributor. Individual results may vary. Always follow recommended professional dental hygiene practices.
                 </p>
-                <p class="text-[10px] font-black tracking-widest uppercase text-slate-400">&copy; 2026 AutoBrush® North American Distributor.</p>
+                <p class="text-[10px] font-black tracking-widest uppercase text-slate-400">
+                    &copy; 2026 AutoBrush® Official North American Distributor. All Rights Reserved.
+                </p>
             </div>
         </div>
     </footer>
@@ -421,6 +437,7 @@
         <div class="bg-white rounded-[40px] p-10 max-w-lg w-full relative shadow-2xl text-center" onclick="event.stopPropagation()">
             <button onclick="closeModals()" class="absolute top-6 right-6 text-brand-400 hover:text-brand-950 transition"><i class="fa-solid fa-xmark text-2xl"></i></button>
             <h3 class="font-display font-black text-2xl mb-6 uppercase italic">Contact Support</h3>
+            <p class="text-brand-600 mb-6 font-medium">Reach us for order tracking or 30-day risk-free returns:</p>
             <div class="space-y-4">
                 <div class="p-4 bg-slate-50 rounded-2xl border border-slate-100">
                     <p class="text-[10px] uppercase font-black text-accent-600 mb-1">Email Support</p>
@@ -432,8 +449,8 @@
 
     <div id="privacyModal" class="modal" onclick="closeModals()">
         <div class="bg-white rounded-[40px] p-10 max-w-2xl w-full max-h-[80vh] overflow-y-auto" onclick="event.stopPropagation()">
-            <h3 class="font-display font-black text-2xl mb-6 uppercase italic">Privacy Policy</h3>
-            <p class="text-brand-600 text-sm leading-relaxed mb-4">Your privacy is protected. Data is used strictly for fulfillment and customer support.</p>
+            <h3 class="font-display font-black text-2xl mb-6 uppercase italic text-brand-950">Privacy Policy</h3>
+            <p class="text-brand-600 text-sm leading-relaxed mb-4">Your privacy is 100% protected. Data collected on this site is used strictly for order fulfillment and customer support purposes.</p>
         </div>
     </div>
 
