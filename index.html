@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <script>
-        // Configuração do Tailwind CSS com as cores de marca
+        // Configuração do Tailwind CSS com a nova cor de destaque #95DAB7
         tailwind.config = {
             theme: {
                 extend: {
@@ -39,9 +39,9 @@
                             50: '#F8FAFC',
                         },
                         accent: {
-                            500: '#E84C8A', // Rosa choque da AutoBrush
-                            600: '#D03A75',
-                            400: '#F071A4',
+                            500: '#95DAB7', // Nova cor solicitada (Verde Menta)
+                            600: '#7CCDA4', // Tom mais escuro para hover
+                            400: '#B2E7CC', // Tom mais claro
                         }
                     }
                 }
@@ -50,11 +50,11 @@
     </script>
 
     <style>
-        /* Estilos Globais e Tipografia */
+        /* Estilos Globais */
         body { font-family: 'Inter', sans-serif; background-color: #F8FAFC; color: #0F172A; -webkit-font-smoothing: antialiased; }
         h1, h2, h3, h4, h5, h6 { font-family: 'Outfit', sans-serif; }
         
-        /* Efeito de granulação cinematográfica */
+        /* Efeito de granulação cinematográfica para profundidade visual */
         .cinematic-noise { 
             position: fixed; top: 0; left: 0; width: 100%; height: 100%; 
             pointer-events: none; opacity: 0.02; z-index: 9999; 
@@ -68,19 +68,19 @@
             -webkit-backdrop-filter: blur(16px); 
         }
 
-        /* Animações de Scroll */
+        /* Animações de Revelação no Scroll */
         .reveal { opacity: 0; transform: translateY(20px); transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1); }
         .revealed { opacity: 1; transform: translateY(0); }
         
         .btn-magnetic { transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
         .btn-magnetic:hover { transform: scale(1.03) translateY(-1px); }
 
-        /* Estilos do FAQ */
+        /* Estilos do FAQ (Acordeão) */
         .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
         .faq-item.active .faq-answer { max-height: 500px; padding-top: 1rem; padding-bottom: 1rem; }
         .faq-item.active .faq-icon { transform: rotate(180deg); }
 
-        /* Animação do Produto */
+        /* Animação de Flutuação Suave para a Imagem Hero */
         @keyframes float {
             0%, 100% { transform: translateY(0px) rotate(0deg); }
             50% { transform: translateY(-15px) rotate(2deg); }
@@ -95,7 +95,7 @@
 
     <div class="cinematic-noise" aria-hidden="true"></div>
 
-    <!-- Barra de Alerta -->
+    <!-- Barra de Alerta Superior -->
     <div class="bg-brand-950 text-white text-center py-2 px-4 z-50 relative">
         <div class="max-w-7xl mx-auto flex justify-center items-center gap-2 font-bold text-[11px] md:text-[13px] tracking-wide">
             <i class="fa-solid fa-star text-yellow-400"></i>
@@ -107,7 +107,6 @@
     <nav class="glass-nav sticky top-0 z-40 px-4 py-3 md:py-4 w-full">
         <div class="max-w-7xl mx-auto flex justify-between items-center">
             <div class="flex items-center gap-2">
-                <!-- LOGOTIPO OFICIAL -->
                 <a href="/">
                     <img src="images/autobrush_Black-Black.png" alt="AutoBrush Logo" class="h-6 md:h-8 lg:h-10 w-auto object-contain">
                 </a>
@@ -146,7 +145,7 @@
                         Deep Clean in Just 30 Seconds.
                     </h2>
 
-                    <!-- Imagem Hero Mobile -->
+                    <!-- Visual Mobile do Produto -->
                     <div class="block lg:hidden mb-10 relative">
                         <div class="absolute inset-0 bg-blue-500/10 blur-[60px] rounded-full"></div>
                         <div class="relative z-10 w-full max-w-[280px] mx-auto animate-float">
@@ -174,13 +173,8 @@
                     </div>
 
                     <div class="flex flex-col sm:flex-row items-center gap-4 reveal" style="transition-delay: 300ms">
-                        <div class="flex -space-x-3">
-                            <div class="w-10 h-10 rounded-full border-2 border-white bg-slate-200"></div>
-                            <div class="w-10 h-10 rounded-full border-2 border-white bg-slate-300"></div>
-                            <div class="w-10 h-10 rounded-full border-2 border-white bg-slate-400"></div>
-                        </div>
-                        <div class="text-left">
-                            <div class="flex text-yellow-400 text-xs mb-0.5">
+                        <div class="text-center lg:text-left">
+                            <div class="flex justify-center lg:justify-start text-yellow-400 text-xs mb-0.5">
                                 <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
                             </div>
                             <p class="text-[12px] font-bold text-brand-900">Trusted by 30,000+ satisfied U.S. customers</p>
@@ -188,7 +182,7 @@
                     </div>
                 </div>
 
-                <!-- Imagem Hero Desktop -->
+                <!-- Visual Desktop do Produto -->
                 <div class="hidden lg:flex relative reveal justify-center items-center" style="transition-delay: 200ms">
                     <div class="absolute w-[120%] h-[120%] bg-blue-500/5 rounded-full blur-[100px]"></div>
                     <div class="relative z-10 w-full max-w-[500px] animate-float">
@@ -199,7 +193,7 @@
         </div>
     </header>
 
-    <!-- Secção de Opções de Início -->
+    <!-- Secção: Opções de Início -->
     <section id="gateway" class="py-20 md:py-32 bg-slate-50 relative">
         <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
             <div class="text-center max-w-2xl mx-auto mb-16 reveal">
@@ -210,12 +204,12 @@
             </div>
 
             <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-                <!-- Card Educacional -->
+                <!-- Card 1 — Educational Path -->
                 <div class="bg-white border border-slate-200 rounded-[40px] p-10 flex flex-col reveal hover:shadow-2xl transition-all duration-500" style="transition-delay: 100ms">
                     <div class="bg-blue-50 text-blue-600 w-16 h-16 rounded-2xl flex items-center justify-center mb-8">
                         <i class="fa-solid fa-book-open text-2xl"></i>
                     </div>
-                    <h3 class="font-display text-2xl font-black text-brand-950 mb-4 uppercase">Educational Path</h3>
+                    <h3 class="font-display text-2xl font-black text-brand-950 mb-4 uppercase tracking-tight">Educational Path</h3>
                     <p class="text-brand-600 text-[16px] leading-relaxed mb-10 flex-grow">
                         Still unsure if AutoBrush is right for you? Discover the science behind full-mouth cleaning and how improper brushing may be harming your gums.
                     </p>
@@ -224,22 +218,20 @@
                     </a>
                 </div>
 
-                <!-- Card Compra Direta -->
+                <!-- Card 2 — Direct Purchase (Corrigido para usar #95DAB7) -->
                 <div class="bg-brand-950 border border-brand-800 rounded-[40px] p-10 flex flex-col reveal shadow-2xl transition-all duration-500" style="transition-delay: 200ms">
-                    <div class="bg-accent-500 text-white w-14 h-14 rounded-2xl flex items-center justify-center mb-8 shadow-lg shadow-accent-500/20">
+                    <div class="bg-accent-500 text-brand-950 w-14 h-14 rounded-2xl flex items-center justify-center mb-8 shadow-lg shadow-accent-500/20">
                         <i class="fa-solid fa-bolt text-2xl"></i>
                     </div>
                     <h3 class="font-display text-2xl font-black text-white mb-4 uppercase tracking-tight">Direct Purchase</h3>
-                    <p class="text-brand-300 text-[16px] leading-relaxed mb-10 flex-grow">
-                        Ready for a Smarter Clean? Skip the research and secure your AutoBrush today with fast shipping and our 30-day risk-free guarantee.
-                    </p>
-                    <a href="https://www.fasttrack37.com/PM7HK3TH/2SS8XSX7/" class="btn-magnetic w-full text-center bg-accent-500 text-white font-bold py-4 rounded-[20px] tracking-widest uppercase text-sm shadow-xl shadow-accent-500/10">
+                    <div class="flex-grow min-h-[40px]"></div>
+                    <a href="https://www.fasttrack37.com/PM7HK3TH/2SS8XSX7/" class="btn-magnetic w-full text-center bg-accent-500 text-brand-950 font-bold py-4 rounded-[20px] tracking-widest uppercase text-sm shadow-xl shadow-accent-500/10 hover:bg-accent-600 transition-colors">
                         GO TO SECURE CHECKOUT
                     </a>
                 </div>
             </div>
 
-            <!-- Selos de Confiança -->
+            <!-- Trust Badges Row -->
             <div class="mt-20 flex flex-wrap justify-center items-center gap-10 opacity-60 grayscale reveal">
                 <div class="flex items-center gap-2 font-black text-[11px] uppercase tracking-tighter"><i class="fa-solid fa-award text-accent-500"></i> ADA Accepted</div>
                 <div class="flex items-center gap-2 font-black text-[11px] uppercase tracking-tighter"><i class="fa-solid fa-microscope text-accent-500"></i> Clinically Studied</div>
@@ -249,7 +241,7 @@
         </div>
     </section>
 
-    <!-- Secção de Diferenciais -->
+    <!-- Secção: Diferenciais -->
     <section id="different" class="py-24 bg-white">
         <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
             <h2 class="font-display text-[32px] md:text-[48px] font-black text-brand-950 text-center mb-16 tracking-tighter reveal">
@@ -266,19 +258,19 @@
                     </ul>
                 </div>
 
-                <div class="bg-blue-50 p-10 rounded-[40px] border-2 border-blue-200 shadow-xl reveal" style="transition-delay: 200ms">
-                    <h4 class="font-display font-black text-blue-600 uppercase tracking-widest text-sm mb-6">The AutoBrush Way</h4>
+                <div class="bg-brand-50 p-10 rounded-[40px] border-2 border-accent-400/30 shadow-xl reveal" style="transition-delay: 200ms">
+                    <h4 class="font-display font-black text-accent-600 uppercase tracking-widest text-sm mb-6">The AutoBrush Way</h4>
                     <ul class="space-y-4 text-brand-950 font-bold">
-                        <li class="flex items-start gap-3 text-blue-700"><i class="fa-solid fa-circle-plus mt-1"></i> Cleans all teeth simultaneously</li>
-                        <li class="flex items-start gap-3 text-blue-700"><i class="fa-solid fa-circle-plus mt-1"></i> Optimized pressure & angle</li>
-                        <li class="flex items-start gap-3 text-blue-700"><i class="fa-solid fa-circle-plus mt-1"></i> 20X better gumline cleaning</li>
+                        <li class="flex items-start gap-3 text-brand-900"><i class="fa-solid fa-circle-plus mt-1 text-accent-500"></i> Cleans all teeth simultaneously</li>
+                        <li class="flex items-start gap-3 text-brand-900"><i class="fa-solid fa-circle-plus mt-1 text-accent-500"></i> Optimized pressure & angle</li>
+                        <li class="flex items-start gap-3 text-brand-900"><i class="fa-solid fa-circle-plus mt-1 text-accent-500"></i> 20X better gumline cleaning</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- FAQ -->
+    <!-- Secção: FAQ -->
     <section id="faq" class="py-24 bg-white">
         <div class="max-w-3xl mx-auto px-5 sm:px-6 lg:px-8">
             <h2 class="font-display text-[32px] md:text-[48px] font-black text-brand-950 text-center mb-16 tracking-tighter reveal">Common Questions</h2>
@@ -301,9 +293,8 @@
         <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
             <div class="flex flex-col md:flex-row justify-between items-center gap-10 mb-16">
                 <div class="text-center md:text-left">
-                    <!-- LOGOTIPO RODAPÉ -->
                     <img src="images/autobrush_Black-Black.png" alt="AutoBrush Logo Footer" class="h-8 md:h-10 w-auto object-contain mx-auto md:mx-0">
-                    <p class="text-[10px] font-black text-accent-500 mt-2 uppercase tracking-widest">Authorized Independent Distributor</p>
+                    <p class="text-[10px] font-black text-accent-600 mt-2 uppercase tracking-widest">Authorized Independent Distributor</p>
                 </div>
                 <div class="flex flex-wrap justify-center gap-8 text-[12px] font-black uppercase tracking-widest">
                     <a href="#" class="hover:text-brand-950 transition">Privacy</a>
@@ -330,7 +321,7 @@
     </footer>
 
     <script>
-        // Animações de Revelação no Scroll
+        // Observador de intersecção para animações de revelação
         const revealObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) entry.target.classList.add('revealed');
@@ -339,7 +330,7 @@
 
         document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
-        // Lógica do FAQ
+        // Lógica de alternância (toggle) do FAQ
         function toggleFaq(element) {
             const wasActive = element.classList.contains('active');
             document.querySelectorAll('.faq-item').forEach(faq => faq.classList.remove('active'));
