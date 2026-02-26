@@ -53,13 +53,6 @@
     <meta name="twitter:description" content="ADA-accepted U-shaped electric toothbrush engineered for a fast, full-mouth clean in 30 seconds. Patented nylon bristles + LED modes." />
     <meta name="twitter:image" content="https://oralcleantech.vercel.app/og-autobrush.jpg" />
 
-    <!-- Performance Hints -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    
-    <!-- Script de Rastreamento rartcloud -->
-    <script src="https://cdn.rartcloud.com/code/8300-eb6df8dc-6b99-455d-a54a-2d0dd2f1e640"></script>
-
     <!-- JSON-LD: Structured Data -->
     <script type="application/ld+json">
     {
@@ -86,7 +79,7 @@
             "name": "AutoBrush"
           },
           "category": "Personal Care > Oral Care > Electric Toothbrush",
-          "description": "AutoBrush\u00ae Adults is an ADA-accepted U-shaped electric toothbrush engineered for full-mouth 360\u00b0 cleaning in a 30-second cycle.",
+          "description": "AutoBrush\u00ae Adults is an ADA-accepted U-shaped electric toothbrush engineered for full-mouth 360\u00b0 cleaning in a 30-second cycle. Patented nylon bristles.",
           "image": ["https://oralcleantech.vercel.app/og-autobrush.jpg"],
           "url": "https://oralcleantech.vercel.app/",
           "offers": {
@@ -103,7 +96,10 @@
     }
     </script>
 
-    <!-- Framework & UI Library -->
+    <!-- Script de Rastreamento rartcloud -->
+    <script src="https://cdn.rartcloud.com/code/8300-eb6df8dc-6b99-455d-a54a-2d0dd2f1e640"></script>
+
+    <!-- UI Core -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -120,7 +116,6 @@
                         brand: {
                             950: '#0F172A', 
                             900: '#1E293B',
-                            800: '#334155',
                             700: '#475569',
                             50: '#F8FAFC'
                         },
@@ -143,7 +138,7 @@
         .reveal { opacity: 0; transform: translateY(20px); transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1); }
         .revealed { opacity: 1; transform: translateY(0); }
         .btn-magnetic { transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
-        .btn-magnetic:hover { transform: scale(1.03) translateY(-1px); }
+        .btn-magnetic:hover { transform: scale(1.02) translateY(-1px); }
         .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
         .faq-item.active .faq-answer { max-height: 800px; padding-top: 1rem; padding-bottom: 1.5rem; }
         .faq-item.active .faq-icon { transform: rotate(180deg); }
@@ -158,15 +153,15 @@
 <body class="flex flex-col min-h-screen overflow-x-hidden">
     <div class="cinematic-noise" aria-hidden="true"></div>
 
-    <!-- Barra de Alerta (Compliance Google Ads) -->
+    <!-- Alert Bar (Compliance) -->
     <div class="bg-brand-950 text-white text-center py-2 px-4 z-50 relative border-b border-white/5">
-        <div class="max-w-7xl mx-auto flex justify-center items-center gap-2 font-bold text-[10px] md:text-[13px] tracking-widest uppercase text-center">
+        <div class="max-w-7xl mx-auto flex justify-center items-center gap-2 font-bold text-[10px] md:text-[13px] tracking-widest uppercase">
             <i class="fa-solid fa-shield-check text-accent-500"></i>
-            AUTHORIZED INDEPENDENT DISTRIBUTOR • FAST U.S. & CANADA SHIPPING • 30-DAY RISK-FREE TRIAL
+            AUTHORIZED INDEPENDENT DISTRIBUTOR • FAST NORTH AMERICAN SHIPPING • 30-DAY RISK-FREE TRIAL
         </div>
     </div>
 
-    <!-- Header (Mobile Centered) -->
+    <!-- Header (Centered Mobile) -->
     <nav class="glass-nav sticky top-0 z-40 px-4 py-3 md:py-5 w-full">
         <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-center md:justify-between items-center gap-4">
             <div class="flex items-center justify-center w-full md:w-auto">
@@ -187,8 +182,9 @@
     <header id="hero" class="pt-8 md:pt-24 pb-16 md:pb-32 relative overflow-hidden bg-white">
         <div class="absolute top-0 right-0 w-[45%] h-full bg-slate-50 rounded-l-[120px] hidden lg:block border-l border-slate-100"></div>
         <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 relative z-10">
-            <div class="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
-                <div class="reveal text-center lg:text-left order-2 lg:order-1">
+            <div class="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center text-center lg:text-left">
+                
+                <div class="reveal order-2 lg:order-1">
                     <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-accent-500/10 border border-accent-500/30 text-brand-950 text-[9px] md:text-[10px] font-black uppercase tracking-widest mb-6 lg:mb-8 mx-auto lg:mx-0">
                         Most People Are Brushing Wrong
                     </div>
@@ -198,43 +194,42 @@
                     <p class="text-[16px] md:text-[22px] font-bold text-brand-700 mb-8 leading-tight italic">
                         Deep Clean Your Entire Mouth in Just 30 Seconds.
                     </p>
+
+                    <!-- Hero Photo Mobile -->
                     <div class="block lg:hidden mb-10 relative">
                         <div class="absolute inset-0 bg-accent-500/10 blur-[80px] rounded-full"></div>
-                        <img src="images/autobrush.png" alt="AutoBrush Device" class="relative z-10 w-full max-w-[280px] mx-auto animate-float object-contain rounded-[40px]">
+                        <img src="images/autobrush.png" alt="AutoBrush" class="relative z-10 w-full max-w-[280px] mx-auto animate-float object-contain rounded-[40px]">
                     </div>
-                    <div class="max-w-xl mx-auto lg:mx-0 mb-10 space-y-6 text-center lg:text-left">
+
+                    <div class="max-w-xl mx-auto lg:mx-0 mb-10 space-y-6">
                         <p class="text-[15px] md:text-[18px] text-brand-600 leading-relaxed">
                             Traditional toothbrushes clean one tooth at a time — leaving plaque behind and putting uneven pressure on your gums. You were never given a smarter option. <strong>Until now.</strong>
                         </p>
                     </div>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mb-10">
-                        <div class="flex items-center justify-center lg:justify-start gap-3 text-left">
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mb-0">
+                        <div class="flex items-center justify-center lg:justify-start gap-3">
                             <i class="fa-solid fa-circle-check text-accent-500 text-lg lg:text-xl"></i>
                             <span class="text-brand-900 font-bold text-sm uppercase tracking-tight">Up to 5.1X Better Plaque Removal*</span>
                         </div>
-                        <div class="flex items-center justify-center lg:justify-start gap-3 text-left">
+                        <div class="flex items-center justify-center lg:justify-start gap-3">
                             <i class="fa-solid fa-circle-check text-accent-500 text-lg lg:text-xl"></i>
                             <span class="text-brand-900 font-bold text-sm uppercase tracking-tight">Clinically Shown Results*</span>
                         </div>
                     </div>
-                    <div class="flex flex-col items-center lg:items-start gap-2">
-                        <div class="flex text-yellow-400 text-xs mb-1">
-                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                        </div>
-                        <p class="text-[11px] font-black text-brand-500 uppercase tracking-[0.1em]">30,000+ Satisfied Customers Nationwide</p>
-                    </div>
                 </div>
+
                 <div class="hidden lg:flex relative reveal justify-center items-center order-1 lg:order-2" style="transition-delay: 200ms">
                     <div class="absolute w-[110%] h-[110%] bg-accent-500/10 rounded-full blur-[120px]"></div>
                     <div class="relative z-10 w-full max-w-[550px] animate-float">
-                        <img src="images/autobrush.png" alt="AutoBrush Technology" class="w-full h-auto drop-shadow-[0_60px_100px_rgba(15,23,42,0.15)] object-contain rounded-[60px]">
+                        <img src="images/autobrush.png" alt="AutoBrush" class="w-full h-auto drop-shadow-[0_60px_100px_rgba(15,23,42,0.15)] object-contain rounded-[60px]">
                     </div>
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- Gateway (Optimized Choice Section) -->
+    <!-- Gateway (Optimized Mobile Choices) -->
     <section id="gateway" class="py-16 md:py-32 bg-slate-50 relative">
         <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
             <div class="text-center max-w-2xl mx-auto mb-16 reveal">
@@ -246,7 +241,7 @@
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10 max-w-5xl mx-auto">
                 
-                <!-- PATH A: DIRECT CHECKOUT (GREEN CARD) -->
+                <!-- CHECKOUT CARD (GREEN) - First on Mobile -->
                 <div class="order-1 md:order-2 bg-accent-500 rounded-[40px] p-10 lg:p-12 flex flex-col reveal shadow-2xl transition-all duration-500 border border-white/20">
                     <div class="bg-brand-950 text-white w-12 h-12 rounded-xl flex items-center justify-center mb-10 shadow-lg">
                         <i class="fa-solid fa-bolt text-xl text-accent-500"></i>
@@ -256,15 +251,15 @@
                     <h3 class="font-display text-[26px] font-black text-brand-950 mb-4 uppercase tracking-tight leading-tight">READY FOR A <br> SMARTER CLEAN?</h3>
                     
                     <p class="text-brand-900 font-medium text-[15px] leading-relaxed mb-12 flex-grow">
-                        Skip the research and experience the future of brushing today. Instant savings with tracked shipping across the U.S. & Canada.
+                        Skip the research and experience the future of brushing today. Tracked shipping to U.S. & Canada and 30-day risk-free guarantee included.
                     </p>
                     
                     <a href="https://www.fasttrack37.com/PM7HK3TH/2SS8XSX7/" class="btn-magnetic w-full text-center bg-brand-950 text-white font-black py-5 rounded-2xl tracking-widest uppercase text-xs shadow-xl hover:bg-brand-900 transition-colors flex items-center justify-center gap-2">
-                        ORDER NOW - 40% OFF <i class="fa-solid fa-arrow-right text-accent-500"></i>
+                        ORDER NOW - 40% OFF <i class="fa-solid fa-arrow-right"></i>
                     </a>
                 </div>
 
-                <!-- PATH B: THE RESEARCH (WHITE CARD) -->
+                <!-- RESEARCH CARD (WHITE) - Second on Mobile -->
                 <div class="order-2 md:order-1 bg-white border border-slate-200 rounded-[40px] p-10 lg:p-12 flex flex-col reveal hover:shadow-xl transition-all duration-500 group">
                     <div class="bg-slate-50 text-brand-950 w-12 h-12 rounded-xl flex items-center justify-center mb-10 border border-slate-100 group-hover:bg-brand-950 group-hover:text-white transition-all">
                         <i class="fa-solid fa-book-open text-xl"></i>
@@ -277,7 +272,7 @@
                         Discover the clinical science behind full-mouth cleaning and why standard techniques often leave 40% of plaque behind.
                     </p>
                     
-                    <a href="https://www.fasttrack37.com/PM7HK3TH/2SS8XSX7/?uid=50959" class="btn-magnetic w-full text-center bg-brand-950 text-white font-black py-5 rounded-2xl tracking-widest uppercase text-xs flex items-center justify-center gap-2 hover:bg-brand-900">
+                    <a href="https://www.fasttrack37.com/PM7HK3TH/2SS8XSX7/?uid=50959" class="btn-magnetic w-full text-center bg-brand-950 text-white font-black py-4 lg:py-5 rounded-2xl tracking-widest uppercase text-xs flex items-center justify-center gap-2 hover:bg-brand-900 transition-all">
                         READ THE FULL STORY <i class="fa-solid fa-arrow-right"></i>
                     </a>
                 </div>
@@ -289,7 +284,7 @@
     <!-- Problem Section -->
     <section id="problem" class="py-20 lg:py-32 bg-white">
         <div class="max-w-5xl mx-auto px-5 text-center">
-            <div class="mb-12 lg:mb-16 reveal">
+            <div class="mb-12 lg:mb-16 reveal text-center">
                 <h2 class="font-display text-[30px] md:text-[48px] font-black text-brand-950 mb-6 tracking-tighter uppercase italic">
                     The Real Problem With <br class="hidden md:block"> Traditional Toothbrushes
                 </h2>
@@ -298,21 +293,21 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-6">
                 <div class="p-6 lg:p-8 bg-slate-50 rounded-3xl border border-slate-100 flex items-center lg:items-start gap-4 reveal">
                     <i class="fa-solid fa-circle-xmark text-red-400 text-lg"></i>
-                    <p class="font-bold text-brand-800 text-sm text-left">Clean one tooth at a time</p>
+                    <p class="font-bold text-brand-800 text-sm text-left leading-tight">Clean one tooth at a time</p>
                 </div>
                 <div class="p-6 lg:p-8 bg-slate-50 rounded-3xl border border-slate-100 flex items-center lg:items-start gap-4 reveal">
                     <i class="fa-solid fa-circle-xmark text-red-400 text-lg"></i>
-                    <p class="font-bold text-brand-800 text-sm text-left">Depend on perfect technique</p>
+                    <p class="font-bold text-brand-800 text-sm text-left leading-tight">Depend on perfect technique</p>
                 </div>
                 <div class="p-6 lg:p-8 bg-slate-50 rounded-3xl border border-slate-100 flex items-center lg:items-start gap-4 reveal">
                     <i class="fa-solid fa-circle-xmark text-red-400 text-lg"></i>
-                    <p class="font-bold text-brand-800 text-sm text-left">Miss the gum line entirely</p>
+                    <p class="font-bold text-brand-800 text-sm text-left leading-tight">Miss the gum line entirely</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- FAQ SECTION (Strategic Questions) -->
+    <!-- FAQ SECTION (Strategic) -->
     <section id="faq" class="py-20 lg:py-32 bg-slate-50">
         <div class="max-w-4xl mx-auto px-5 text-center">
             <div class="mb-16 reveal">
@@ -332,7 +327,7 @@
                         <i class="fa-solid fa-chevron-down faq-icon text-accent-600 transition-transform duration-300"></i>
                     </div>
                     <div class="faq-answer px-6 lg:px-8 bg-white border-t border-slate-100 text-brand-700 text-sm lg:text-base leading-relaxed text-left font-medium">
-                        <p>Standard electric brushes clean one tooth at a time. AutoBrush® cleans all teeth simultaneously. Clinical studies show it removes up to 5.1X more plaque than manual brushing by ensuring perfect coverage across every dental surface in just 30 seconds.</p>
+                        <p>Standard electric brushes clean one tooth at a time. AutoBrush® cleans all teeth simultaneously. Clinical studies show it removes up to 5.1X more plaque than manual brushing in just 30 seconds.</p>
                     </div>
                 </div>
 
@@ -345,7 +340,7 @@
                         <i class="fa-solid fa-chevron-down faq-icon text-accent-600 transition-transform duration-300"></i>
                     </div>
                     <div class="faq-answer px-6 lg:px-8 bg-white border-t border-slate-100 text-brand-700 text-sm lg:text-base leading-relaxed text-left font-medium">
-                        <p>Yes. AutoBrush® is currently the **only** U-shaped toothbrush to receive the ADA Seal of Acceptance. This is a crucial distinction, as many low-cost silicone copies on the market have failed to meet the rigorous mechanical cleaning standards required by the ADA.</p>
+                        <p>Yes. AutoBrush® is currently the **only** U-shaped toothbrush to receive the ADA Seal of Acceptance. Many low-cost silicone copies on the market have failed to meet the rigorous mechanical cleaning standards required by the ADA.</p>
                     </div>
                 </div>
 
@@ -366,25 +361,12 @@
                 <div class="faq-item border border-slate-200 rounded-[30px] bg-white overflow-hidden cursor-pointer transition-all duration-300 hover:border-accent-500 reveal shadow-sm" onclick="toggleFaq(this)">
                     <div class="faq-question flex justify-between items-center p-6 lg:p-8 text-left">
                         <h4 class="font-display font-black text-brand-950 text-sm lg:text-lg uppercase tracking-tight pr-4 leading-tight">
-                            Is it safe for dental work, braces, or sensitive teeth?
-                        </h4>
-                        <i class="fa-solid fa-chevron-down faq-icon text-accent-600 transition-transform duration-300"></i>
-                    </div>
-                    <div class="faq-answer px-6 lg:px-8 bg-white border-t border-slate-100 text-brand-700 text-sm lg:text-base leading-relaxed text-left font-medium">
-                        <p>Absolutely. AutoBrush® features a sensitive mode and integrated red-light therapy for gum support. It is highly effective for cleaning around orthodontic wires and brackets where traditional brushes often leave food particles trapped.</p>
-                    </div>
-                </div>
-
-                <!-- Q5 -->
-                <div class="faq-item border border-slate-200 rounded-[30px] bg-white overflow-hidden cursor-pointer transition-all duration-300 hover:border-accent-500 reveal shadow-sm" onclick="toggleFaq(this)">
-                    <div class="faq-question flex justify-between items-center p-6 lg:p-8 text-left">
-                        <h4 class="font-display font-black text-brand-950 text-sm lg:text-lg uppercase tracking-tight pr-4 leading-tight">
                             What is the 30-Day Risk-Free Guarantee?
                         </h4>
                         <i class="fa-solid fa-chevron-down faq-icon text-accent-600 transition-transform duration-300"></i>
                     </div>
                     <div class="faq-answer px-6 lg:px-8 bg-white border-t border-slate-100 text-brand-700 text-sm lg:text-base leading-relaxed text-left font-medium">
-                        <p>We want you to be 100% confident in your smile. If you are not satisfied after 30 days of consistent use, our support team will provide a full refund of the purchase price, no questions asked.</p>
+                        <p>We want you to be 100% confident in your smile. If you are not satisfied after 30 days of consistent use, our North American support team will provide a full refund of the purchase price, no questions asked.</p>
                     </div>
                 </div>
             </div>
@@ -402,19 +384,19 @@
                 <a href="https://www.fasttrack37.com/PM7HK3TH/2SS8XSX7/" class="btn-magnetic bg-brand-950 text-white font-black py-4 lg:py-5 px-10 lg:px-12 rounded-full tracking-widest uppercase text-xs lg:text-sm shadow-2xl flex items-center justify-center gap-2">
                     ORDER NOW - 40% OFF <i class="fa-solid fa-arrow-right"></i>
                 </a>
-                <a href="#" onclick="openModal('contactModal'); return false;" class="btn-magnetic bg-white text-brand-950 font-black py-4 lg:py-5 px-10 lg:px-12 rounded-full tracking-widest uppercase text-xs lg:text-sm shadow-lg flex items-center justify-center gap-2">
+                <a href="#" onclick="openModal('contactModal'); return false;" class="btn-magnetic bg-white text-brand-950 font-black py-4 lg:py-5 px-10 lg:px-12 rounded-full tracking-widest uppercase text-xs lg:text-sm shadow-lg flex items-center justify-center gap-2 text-brand-950">
                     CONTACT SUPPORT <i class="fa-solid fa-envelope"></i>
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- Footer (Complete Transparency) -->
+    <!-- Footer -->
     <footer class="bg-white text-brand-600 py-16 lg:py-20 border-t border-slate-100">
         <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 text-center md:text-left">
             <div class="flex flex-col md:flex-row justify-between items-center gap-10 mb-16">
                 <div class="flex flex-col items-center md:items-start">
-                    <img src="images/autobrush_Black-Black.webp" alt="AutoBrush Official Distributor" class="h-6 md:h-10 w-auto object-contain">
+                    <img src="images/autobrush_Black-Black.webp" alt="AutoBrush Official" class="h-6 md:h-10 w-auto object-contain">
                     <p class="text-[9px] font-black text-accent-600 mt-3 uppercase tracking-widest">Authorized Independent Distributor</p>
                 </div>
                 <div class="flex flex-wrap justify-center gap-6 lg:gap-8 text-[10px] lg:text-[12px] font-black uppercase tracking-widest text-brand-950">
@@ -423,10 +405,10 @@
                 </div>
             </div>
             <div class="border-t border-slate-100 pt-10 text-center">
-                <p class="max-w-4xl mx-auto text-[10px] lg:text-[11px] leading-relaxed text-slate-400 mb-8 italic text-slate-400">
-                    *Based on internal clinical study data. AutoBrush® is ADA-accepted and supported by clinical studies. Individual results may vary between users. Standard dental hygiene practices are still recommended.
+                <p class="max-w-4xl mx-auto text-[10px] lg:text-[11px] leading-relaxed text-slate-400 mb-8 italic">
+                    *Based on internal clinical study data. AutoBrush® is ADA-accepted and supported by clinical studies. This website is operated by an Authorized Independent Distributor. Individual results may vary.
                 </p>
-                <p class="text-[10px] font-black tracking-widest uppercase text-slate-400">&copy; 2026 AutoBrush® Official North American Distributor. All Rights Reserved.</p>
+                <p class="text-[10px] font-black tracking-widest uppercase text-slate-400">&copy; 2026 AutoBrush® Official Website. All Rights Reserved. Operated by Authorized Distributor.</p>
             </div>
         </div>
     </footer>
@@ -435,7 +417,7 @@
     <div id="contactModal" class="modal" onclick="closeModals()">
         <div class="bg-white rounded-[40px] p-10 max-w-lg w-full relative shadow-2xl text-center" onclick="event.stopPropagation()">
             <button onclick="closeModals()" class="absolute top-6 right-6 text-brand-400 hover:text-brand-950 transition"><i class="fa-solid fa-xmark text-2xl"></i></button>
-            <h3 class="font-display font-black text-2xl mb-6 uppercase italic text-brand-950">Contact Support</h3>
+            <h3 class="font-display font-black text-2xl mb-6 uppercase italic">Contact Support</h3>
             <p class="text-brand-900 font-bold">support@oralcleantech.com</p>
         </div>
     </div>
@@ -443,7 +425,7 @@
     <div id="privacyModal" class="modal" onclick="closeModals()">
         <div class="bg-white rounded-[40px] p-10 max-w-2xl w-full max-h-[80vh] overflow-y-auto" onclick="event.stopPropagation()">
             <h3 class="font-display font-black text-2xl mb-6 uppercase italic text-brand-950">Privacy Policy</h3>
-            <p class="text-brand-600 text-sm leading-relaxed mb-4">Your privacy is protected. Data is used strictly for fulfillment and support on this authorized distributor site.</p>
+            <p class="text-brand-600 text-sm leading-relaxed mb-4">Your privacy is 100% protected on this authorized distributor site. Data used strictly for fulfillment and customer support.</p>
         </div>
     </div>
 
