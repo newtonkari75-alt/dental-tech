@@ -1,20 +1,21 @@
 <!DOCTYPE html>
-<html lang="en-IE" class="scroll-smooth">
+<html lang="en-US" class="scroll-smooth">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- SEO & Metadata -->
-    <title>Ozalyn™ Official Ireland | Microbiome & Metabolic Support Supplement</title>
-    <meta name="description" content="Rebalance your microbiome and support natural metabolic harmony with Ozalyn™. Clinically-studied 6 probiotic strains, prebiotic fibre & Magnesium BHB. Free shipping in Ireland.">
+    <!-- SEO e Metadados -->
+    <title>AutoBrush™ Official | 30-Second Full-Mouth Cleaning</title>
+    <meta name="description" content="Upgrade the way you brush. AutoBrush™ is the only ADA-accepted U-shaped toothbrush engineered for 360° cleaning in just 30 seconds.">
     
-    <!-- Scripts & Fonts -->
+    <!-- Scripts e Fontes -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <script>
+        // Configuração do Tailwind CSS
         tailwind.config = {
             theme: {
                 extend: {
@@ -24,22 +25,18 @@
                     },
                     colors: {
                         brand: {
-                            950: '#1B2340',
-                            900: '#252F52',
-                            800: '#3A4670',
-                            700: '#546089',
-                            600: '#6B7BA3',
-                            500: '#8593B8',
-                            400: '#A3AECC',
-                            300: '#C0C9DE',
-                            200: '#D9DFED',
-                            100: '#ECF0F7',
-                            50: '#F5F7FC',
+                            950: '#0F172A', // Navy mais profundo para tecnologia
+                            900: '#1E293B',
+                            800: '#334155',
+                            700: '#475569',
+                            600: '#64748B',
+                            500: '#94A3B8',
+                            50: '#F8FAFC',
                         },
                         accent: {
-                            500: '#E84C8A',
+                            500: '#E84C8A', // Mantendo o rosa vibrante para contraste de CTA
                             600: '#D03A75',
-                            700: '#B72E63',
+                            400: '#F071A4',
                         }
                     }
                 }
@@ -48,50 +45,50 @@
     </script>
 
     <style>
-        body { font-family: 'Inter', sans-serif; background-color: #F5F7FC; color: #1B2340; -webkit-font-smoothing: antialiased; }
+        /* Estilos Globais */
+        body { font-family: 'Inter', sans-serif; background-color: #F8FAFC; color: #0F172A; -webkit-font-smoothing: antialiased; }
         h1, h2, h3, h4, h5, h6 { font-family: 'Outfit', sans-serif; }
         
         .cinematic-noise { 
             position: fixed; top: 0; left: 0; width: 100%; height: 100%; 
-            pointer-events: none; opacity: 0.03; z-index: 9999; 
+            pointer-events: none; opacity: 0.02; z-index: 9999; 
             background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E"); 
         }
 
         .glass-nav { 
-            background: rgba(245, 247, 252, 0.92); 
-            border-bottom: 1px solid rgba(27, 35, 64, 0.06); 
+            background: rgba(248, 250, 252, 0.92); 
+            border-bottom: 1px solid rgba(15, 23, 42, 0.06); 
             backdrop-filter: blur(16px); 
             -webkit-backdrop-filter: blur(16px); 
         }
 
-        .reveal { opacity: 0; transform: translateY(25px); transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
+        .reveal { opacity: 0; transform: translateY(20px); transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1); }
         .revealed { opacity: 1; transform: translateY(0); }
         
-        .btn-magnetic { transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1); }
-        .btn-magnetic:hover { transform: scale(1.05) translateY(-2px); }
+        .btn-magnetic { transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
+        .btn-magnetic:hover { transform: scale(1.03) translateY(-1px); }
 
-        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1), padding 0.4s ease; }
+        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
         .faq-item.active .faq-answer { max-height: 500px; padding-top: 1rem; padding-bottom: 1rem; }
         .faq-item.active .faq-icon { transform: rotate(180deg); }
 
         .modal { 
             display: none; 
             position: fixed; inset: 0; z-index: 100;
-            background: rgba(27, 35, 64, 0.8);
+            background: rgba(15, 23, 42, 0.85);
             backdrop-filter: blur(8px);
             align-items: center; justify-content: center;
-            padding: 1rem;
         }
         .modal.active { display: flex; animation: fadeIn 0.3s forwards; }
         @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 
-        /* Floating Animation for Product */
         @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-15px); }
-            100% { transform: translateY(0px); }
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-15px) rotate(2deg); }
         }
         .animate-float { animation: float 6s ease-in-out infinite; }
+        
+        .check-gradient { background: linear-gradient(135deg, #10B981 0%, #059669 100%); }
     </style>
 </head>
 
@@ -99,126 +96,123 @@
 
     <div class="cinematic-noise" aria-hidden="true"></div>
 
-    <!-- Alert Bar -->
-    <div class="bg-brand-950 text-white text-center py-2.5 px-4 z-50 relative">
-        <div class="max-w-7xl mx-auto flex flex-col gap-0.5">
-            <div class="font-semibold tracking-wide text-[12px] md:text-[14px] flex justify-center items-center gap-2">
-                <i class="fa-solid fa-truck-fast text-accent-500"></i>
-                Free Express Shipping to Ireland & 30-Day Money-Back Guarantee
-            </div>
-            <div class="opacity-60 text-[10px] md:text-xs tracking-wider uppercase font-medium">
-                Manufactured in the Netherlands · Strict EU Quality Standards
-            </div>
+    <!-- Barra de Alerta Superior -->
+    <div class="bg-brand-950 text-white text-center py-2 px-4 z-50 relative">
+        <div class="max-w-7xl mx-auto flex justify-center items-center gap-2 font-bold text-[11px] md:text-[13px] tracking-wide">
+            <i class="fa-solid fa-star text-yellow-400"></i>
+            ADA ACCEPTED TECHNOLOGY • FAST U.S. SHIPPING • 30-DAY GUARANTEE
         </div>
     </div>
 
-    <!-- Navigation -->
+    <!-- Navegação -->
     <nav class="glass-nav sticky top-0 z-40 px-4 py-3 md:py-4 w-full">
         <div class="max-w-7xl mx-auto flex justify-between items-center">
             <div class="flex items-center gap-2">
-                <span class="text-xl md:text-2xl font-display font-extrabold tracking-tight text-brand-950">
-                    OZALYN<sup class="text-[9px] md:text-[10px] font-bold text-accent-500">™</sup>
-                </span>
-                <span class="hidden md:inline text-[11px] text-brand-600 font-medium border-l border-brand-300 pl-2.5 leading-tight">
-                    Microbiome &<br>Metabolic Support
+                <span class="text-xl md:text-2xl font-display font-black tracking-tighter text-brand-950 uppercase italic">
+                    AutoBrush<sup class="text-[9px] font-bold text-accent-500">™</sup>
                 </span>
             </div>
 
-            <div class="hidden lg:flex gap-7 text-[13px] font-semibold text-brand-700">
-                <a href="#science" class="hover:text-accent-500 transition duration-300">The Science</a>
-                <a href="#ingredients" class="hover:text-accent-500 transition duration-300">Ingredients</a>
-                <a href="#gateway" class="hover:text-accent-500 transition duration-300">How It Works</a>
-                <a href="#reviews" class="hover:text-accent-500 transition duration-300">Reviews</a>
-                <a href="#faq" class="hover:text-accent-500 transition duration-300">FAQ</a>
+            <div class="hidden lg:flex gap-7 text-[12px] font-bold uppercase tracking-widest text-brand-700">
+                <a href="#different" class="hover:text-accent-500 transition">Why AutoBrush?</a>
+                <a href="#features" class="hover:text-accent-500 transition">Features</a>
+                <a href="#reviews" class="hover:text-accent-500 transition">Reviews</a>
+                <a href="#faq" class="hover:text-accent-500 transition">FAQ</a>
             </div>
 
-            <a href="#gateway" class="btn-magnetic bg-accent-500 hover:bg-accent-600 text-white text-[12px] md:text-[13px] font-bold px-4 md:px-5 py-2 md:py-2.5 rounded-[2rem] shadow-lg shadow-accent-500/20">
-                START NOW
+            <a href="https://www.fasttrack37.com/PM7HK3TH/2SS8XSX7/" class="btn-magnetic bg-brand-950 text-white text-[11px] md:text-[12px] font-black tracking-widest px-5 py-2.5 rounded-full shadow-xl">
+                GET AUTOBRUSH
             </a>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <header id="science" class="pt-12 md:pt-28 pb-16 md:pb-28 relative overflow-hidden bg-brand-50">
-        <div class="absolute inset-0 bg-gradient-to-br from-brand-100 via-brand-50 to-white opacity-80"></div>
-        
+    <!-- Secção Hero -->
+    <header id="hero" class="pt-10 md:pt-24 pb-16 md:pb-32 relative overflow-hidden bg-white">
+        <!-- Background Decorativo -->
+        <div class="absolute top-0 right-0 w-[50%] h-full bg-slate-50 rounded-l-[100px] hidden lg:block"></div>
+        <div class="absolute top-20 right-20 w-64 h-64 bg-accent-500/10 rounded-full blur-[100px]"></div>
+
         <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 relative z-10">
-            <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
                 <div class="reveal text-center lg:text-left">
-                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-200/50 border border-brand-300/50 text-brand-800 text-xs font-bold mb-6">
-                        <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
-                        NOW AVAILABLE IN IRELAND
+                    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 border border-blue-100 text-blue-700 text-[10px] font-black uppercase tracking-widest mb-6">
+                        <span class="w-2 h-2 rounded-full bg-blue-600 animate-ping"></span>
+                        Now Available in the United States
                     </div>
-                    <h1 class="font-display text-[36px] md:text-[48px] lg:text-[60px] font-extrabold text-brand-950 leading-[1.1] mb-6 tracking-tight">
-                        Rebalance Your Microbiome. <span class="text-accent-500">Restore Harmony.</span>
+                    <h1 class="font-display text-[40px] md:text-[56px] lg:text-[72px] font-black text-brand-950 leading-[0.95] mb-6 tracking-tighter">
+                        Upgrade the Way <br class="hidden lg:block"> You <span class="text-accent-500">Brush.</span>
                     </h1>
+                    <h2 class="text-[20px] md:text-[24px] font-bold text-brand-700 mb-8 leading-tight">
+                        Deep Clean in Just 30 Seconds.
+                    </h2>
 
-                    <!-- Mobile Product Visual -->
+                    <!-- Visual Mobile do Produto -->
                     <div class="block lg:hidden mb-10 relative">
-                        <div class="absolute inset-0 bg-accent-500/20 blur-[80px] rounded-full scale-75"></div>
-                        <div class="relative z-10 w-full max-w-[240px] mx-auto animate-float">
-                             <!-- Bottle SVG Placeholder -->
-                             <svg viewBox="0 0 400 600" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-auto drop-shadow-2xl">
-                                <rect x="80" y="120" width="240" height="420" rx="40" fill="#1B2340" />
-                                <rect x="80" y="120" width="240" height="80" rx="10" fill="#252F52" />
-                                <text x="200" y="320" text-anchor="middle" fill="#E84C8A" font-family="Outfit" font-weight="900" font-size="48">OZALYN</text>
-                                <text x="200" y="360" text-anchor="middle" fill="white" font-family="Inter" font-size="14" opacity="0.6">MICROBIOME SUPPORT</text>
-                                <circle cx="200" cy="450" r="30" fill="#E84C8A" fill-opacity="0.2" />
-                                <path d="M190 450L210 450M200 440L200 460" stroke="#E84C8A" stroke-width="4" stroke-linecap="round"/>
+                        <div class="absolute inset-0 bg-blue-500/10 blur-[60px] rounded-full"></div>
+                        <div class="relative z-10 w-full max-w-[280px] mx-auto animate-float">
+                             <svg viewBox="0 0 400 500" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-auto drop-shadow-2xl">
+                                <!-- Base da Escova -->
+                                <rect x="120" y="280" width="160" height="180" rx="40" fill="#0F172A" />
+                                <!-- Cabeça em U -->
+                                <path d="M100 150C100 100 300 100 300 150V220C300 250 100 250 100 220V150Z" fill="#E2E8F0" stroke="#CBD5E1" stroke-width="4"/>
+                                <path d="M130 160C130 130 270 130 270 160V200C270 220 130 220 130 200V160Z" fill="white" />
+                                <!-- Detalhes LED -->
+                                <circle cx="200" cy="350" r="20" fill="#E84C8A" fill-opacity="0.8" />
+                                <text x="200" y="420" text-anchor="middle" fill="white" font-family="Outfit" font-weight="900" font-size="16">AUTOBRUSH</text>
                              </svg>
                         </div>
                     </div>
 
-                    <p class="text-[17px] md:text-lg text-brand-700 leading-relaxed mb-8 md:mb-10 max-w-xl mx-auto lg:mx-0">
-                        Stop fighting your body. Rebalance your gut ecosystem with a high-potency blend of Magnesium BHB, prebiotic fiber, and 6 targeted probiotic strains.
+                    <p class="text-[17px] md:text-[19px] text-brand-600 leading-relaxed mb-10 max-w-xl mx-auto lg:mx-0">
+                        Stop scrubbing. Start cleaning smarter with the only <strong>ADA-accepted</strong> U-shaped toothbrush engineered for full-mouth 360° cleaning.
                     </p>
 
-                    <div class="space-y-4 md:space-y-5 mb-10 text-left inline-block lg:block">
-                        <div class="flex items-start gap-4 reveal" style="transition-delay: 100ms">
-                            <div class="bg-white text-accent-500 w-10 h-10 rounded-xl flex items-center justify-center shrink-0 shadow-sm border border-brand-200">
+                    <div class="grid sm:grid-cols-2 gap-4 mb-10">
+                        <div class="flex items-center gap-3 reveal" style="transition-delay: 100ms">
+                            <div class="w-6 h-6 rounded-full check-gradient flex items-center justify-center text-white text-[10px]">
                                 <i class="fa-solid fa-check"></i>
                             </div>
-                            <p class="text-brand-700 leading-snug text-[15px]">
-                                <strong class="text-brand-950">Reduces Bloating</strong> — Noticeable results within weeks.
-                            </p>
+                            <span class="text-brand-950 font-bold text-sm">5.1X better plaque removal</span>
                         </div>
-                        <div class="flex items-start gap-4 reveal" style="transition-delay: 200ms">
-                            <div class="bg-white text-accent-500 w-10 h-10 rounded-xl flex items-center justify-center shrink-0 shadow-sm border border-brand-200">
+                        <div class="flex items-center gap-3 reveal" style="transition-delay: 200ms">
+                            <div class="w-6 h-6 rounded-full check-gradient flex items-center justify-center text-white text-[10px]">
                                 <i class="fa-solid fa-check"></i>
                             </div>
-                            <p class="text-brand-700 leading-snug text-[15px]">
-                                <strong class="text-brand-950">Metabolic Support</strong> — Optimized for natural energy levels.
-                            </p>
+                            <span class="text-brand-950 font-bold text-sm">LED whitening built-in</span>
                         </div>
                     </div>
 
-                    <div class="bg-white/80 backdrop-blur-md border border-brand-200 rounded-3xl p-5 md:p-6 shadow-sm flex flex-col sm:flex-row items-center gap-4 md:gap-6 reveal" style="transition-delay: 300ms">
-                        <div class="flex flex-col items-center sm:items-start shrink-0">
-                            <div class="flex text-[#FFB800] text-lg gap-0.5 mb-1">
+                    <div class="flex flex-col sm:flex-row items-center gap-4 reveal" style="transition-delay: 300ms">
+                        <div class="flex -space-x-3">
+                            <div class="w-10 h-10 rounded-full border-2 border-white bg-slate-200"></div>
+                            <div class="w-10 h-10 rounded-full border-2 border-white bg-slate-300"></div>
+                            <div class="w-10 h-10 rounded-full border-2 border-white bg-slate-400"></div>
+                        </div>
+                        <div class="text-left">
+                            <div class="flex text-yellow-400 text-xs mb-0.5">
                                 <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
                             </div>
-                            <span class="text-brand-950 font-bold text-sm">4.8/5 Rating</span>
-                        </div>
-                        <div class="h-px w-full sm:h-10 sm:w-px bg-brand-200"></div>
-                        <div class="text-[13px] text-brand-600 text-center sm:text-left leading-snug">
-                            Join <strong class="text-brand-950">1,400+ customers</strong> in Dublin, Cork & Galway who have reclaimed their gut health.
+                            <p class="text-[12px] font-bold text-brand-900">Trusted by 30,000+ satisfied U.S. customers</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- Desktop Visual -->
-                <div class="hidden lg:flex relative h-[600px] justify-center items-center reveal" style="transition-delay: 200ms">
-                    <div class="absolute inset-0 bg-gradient-to-br from-brand-200 to-white rounded-[3rem] transform rotate-3 scale-105 shadow-inner"></div>
-                    <div class="absolute inset-5 bg-white/40 backdrop-blur-sm rounded-[2.5rem] border border-white/60"></div>
-                    <div class="relative z-10 w-full max-w-[380px] animate-float">
-                        <svg viewBox="0 0 400 600" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-auto drop-shadow-[0_40px_80px_rgba(27,35,64,0.3)]">
-                            <rect x="80" y="100" width="240" height="420" rx="40" fill="#1B2340" />
-                            <rect x="80" y="100" width="240" height="80" rx="10" fill="#252F52" />
-                            <text x="200" y="300" text-anchor="middle" fill="#E84C8A" font-family="Outfit" font-weight="900" font-size="48">OZALYN</text>
-                            <text x="200" y="340" text-anchor="middle" fill="white" font-family="Inter" font-size="14" opacity="0.6">MICROBIOME & METABOLIC</text>
-                            <rect x="120" y="400" width="160" height="40" rx="20" fill="white" fill-opacity="0.1" />
-                            <text x="200" y="425" text-anchor="middle" fill="white" font-family="Inter" font-weight="700" font-size="12">PREMIUM FORMULA</text>
+                <!-- Visual Desktop -->
+                <div class="hidden lg:flex relative reveal justify-center items-center" style="transition-delay: 200ms">
+                    <div class="absolute w-[120%] h-[120%] bg-blue-500/5 rounded-full blur-[100px]"></div>
+                    <div class="relative z-10 w-full max-w-[450px] animate-float">
+                        <svg viewBox="0 0 400 550" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-auto drop-shadow-[0_50px_100px_rgba(15,23,42,0.2)]">
+                            <!-- Corpo Robusto -->
+                            <rect x="110" y="260" width="180" height="220" rx="50" fill="#0F172A" />
+                            <rect x="110" y="260" width="180" height="60" rx="20" fill="#1E293B" />
+                            <!-- Cabeça U -->
+                            <path d="M80 120C80 50 320 50 320 120V200C320 250 80 250 80 200V120Z" fill="#F1F5F9" stroke="#E2E8F0" stroke-width="6"/>
+                            <path d="M120 140C120 100 280 100 280 140V180C280 210 120 210 120 180V140Z" fill="white" />
+                            <!-- Botão Glow -->
+                            <circle cx="200" cy="370" r="25" fill="#E84C8A" />
+                            <circle cx="200" cy="370" r="35" stroke="#E84C8A" stroke-width="2" stroke-dasharray="4 4" />
+                            <text x="200" y="445" text-anchor="middle" fill="white" font-family="Outfit" font-weight="900" font-size="18" letter-spacing="2">AUTOBRUSH</text>
                         </svg>
                     </div>
                 </div>
@@ -226,112 +220,193 @@
         </div>
     </header>
 
-    <!-- Start Options -->
-    <section id="gateway" class="py-20 md:py-32 bg-white relative">
+    <!-- Como começar? -->
+    <section id="gateway" class="py-20 md:py-32 bg-slate-50 relative">
         <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
             <div class="text-center max-w-2xl mx-auto mb-16 reveal">
-                <h2 class="font-display text-[32px] md:text-[48px] font-extrabold text-brand-950 mb-5 tracking-tight leading-tight">
+                <h2 class="font-display text-[32px] md:text-[48px] font-black text-brand-950 mb-4 tracking-tighter">
                     How Would You Like to Start?
                 </h2>
-                <p class="text-brand-600">Choose the path that best fits your health journey.</p>
+                <p class="text-brand-600 font-medium">Choose the path that fits your routine.</p>
             </div>
 
             <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-                <!-- Option A: QUIZ -->
-                <div class="bg-brand-50 border border-brand-200 rounded-[2.5rem] p-8 md:p-12 flex flex-col relative overflow-hidden reveal group hover:shadow-xl transition-all duration-500" style="transition-delay: 100ms">
-                    <div class="bg-white text-brand-950 w-14 h-14 rounded-2xl flex items-center justify-center mb-8 shadow-sm border border-brand-200 group-hover:bg-brand-950 group-hover:text-white transition-colors duration-500">
-                        <i class="fa-solid fa-clipboard-question text-xl"></i>
+                <!-- Card 1: Educacional -->
+                <div class="bg-white border border-slate-200 rounded-[40px] p-10 flex flex-col reveal hover:shadow-2xl transition-all duration-500" style="transition-delay: 100ms">
+                    <div class="bg-blue-50 text-blue-600 w-16 h-16 rounded-2xl flex items-center justify-center mb-8">
+                        <i class="fa-solid fa-book-open text-2xl"></i>
                     </div>
-                    <h3 class="font-display text-2xl font-bold text-brand-950 mb-4">Personalised Assessment</h3>
-                    <p class="text-brand-700 text-[16px] leading-relaxed mb-10 flex-grow">
-                        Not sure if Ozalyn is right for you? Take our 2-minute Assessment to understand your profile and receive a tailored suggestion.
+                    <h3 class="font-display text-2xl font-black text-brand-950 mb-4 uppercase">Educational Path</h3>
+                    <p class="text-brand-600 text-[16px] leading-relaxed mb-10 flex-grow">
+                        Still unsure if AutoBrush is right for you? Discover the science behind full-mouth cleaning and how improper brushing may be harming your gums.
                     </p>
-                    <a href="#" class="btn-magnetic w-full text-center bg-brand-950 text-white font-bold py-4 rounded-2xl shadow-lg">
-                        TAKE THE 2-MIN QUIZ
+                    <a href="https://www.fasttrack37.com/PM7HK3TH/2SS8XSX7/?uid=50959" class="btn-magnetic w-full text-center bg-brand-950 text-white font-black py-4 rounded-2xl tracking-widest uppercase text-sm">
+                        READ THE FULL STORY
                     </a>
                 </div>
 
-                <!-- Option B: CHECKOUT -->
-                <div class="bg-brand-950 border border-brand-800 rounded-[2.5rem] p-8 md:p-12 flex flex-col relative overflow-hidden reveal shadow-2xl group transition-all duration-500" style="transition-delay: 200ms">
-                    <div class="absolute top-6 right-6 bg-accent-500 text-white text-[10px] font-bold px-4 py-1.5 rounded-full uppercase tracking-widest shadow-lg">Recommended</div>
-                    <div class="bg-accent-500/20 text-accent-500 w-14 h-14 rounded-2xl flex items-center justify-center mb-8 border border-accent-500/20 group-hover:bg-accent-500 group-hover:text-white transition-colors duration-500">
-                        <i class="fa-solid fa-cart-shopping text-xl"></i>
+                <!-- Card 2: Direto -->
+                <div class="bg-brand-950 border border-brand-800 rounded-[40px] p-10 flex flex-col reveal shadow-2xl transition-all duration-500" style="transition-delay: 200ms">
+                    <div class="bg-accent-500 text-white w-16 h-16 rounded-2xl flex items-center justify-center mb-8">
+                        <i class="fa-solid fa-bolt text-2xl"></i>
                     </div>
-                    <h3 class="font-display text-2xl font-bold text-white mb-4">Direct Checkout</h3>
+                    <h3 class="font-display text-2xl font-black text-white mb-4 uppercase">Direct Purchase</h3>
                     <p class="text-brand-300 text-[16px] leading-relaxed mb-10 flex-grow">
-                        Ready to start your transformation? Skip the quiz and secure your supply with free express shipping across Ireland.
+                        Ready for a Smarter Clean? Skip the research and secure your AutoBrush today with fast shipping and our 30-day risk-free guarantee.
                     </p>
-                    <a href="#" class="btn-magnetic w-full text-center bg-accent-500 hover:bg-accent-600 text-white font-bold py-4 rounded-2xl shadow-lg">
+                    <a href="https://www.fasttrack37.com/PM7HK3TH/2SS8XSX7/" class="btn-magnetic w-full text-center bg-accent-500 text-white font-black py-4 rounded-2xl tracking-widest uppercase text-sm">
                         GO TO SECURE CHECKOUT
                     </a>
                 </div>
             </div>
 
             <!-- Trust Badges -->
-            <div class="mt-16 flex flex-wrap justify-center items-center gap-x-10 gap-y-6 opacity-60 grayscale hover:grayscale-0 transition duration-500 reveal">
-                <div class="flex items-center gap-2 font-bold text-sm"><i class="fa-solid fa-shield-halved text-accent-500"></i> EU Certified</div>
-                <div class="flex items-center gap-2 font-bold text-sm"><i class="fa-solid fa-leaf text-accent-500"></i> Non-GMO</div>
-                <div class="flex items-center gap-2 font-bold text-sm"><i class="fa-solid fa-flask text-accent-500"></i> Science Backed</div>
-                <div class="flex items-center gap-2 font-bold text-sm"><i class="fa-solid fa-truck text-accent-500"></i> Fast IE Shipping</div>
+            <div class="mt-20 flex flex-wrap justify-center items-center gap-10 opacity-60 grayscale reveal">
+                <div class="flex items-center gap-2 font-black text-[11px] uppercase tracking-tighter"><i class="fa-solid fa-award text-accent-500"></i> ADA Accepted</div>
+                <div class="flex items-center gap-2 font-black text-[11px] uppercase tracking-tighter"><i class="fa-solid fa-microscope text-accent-500"></i> Clinically Studied</div>
+                <div class="flex items-center gap-2 font-black text-[11px] uppercase tracking-tighter"><i class="fa-solid fa-plane-up text-accent-500"></i> Fast U.S. Shipping</div>
+                <div class="flex items-center gap-2 font-black text-[11px] uppercase tracking-tighter"><i class="fa-solid fa-shield-heart text-accent-500"></i> 30-Day Guarantee</div>
             </div>
         </div>
     </section>
 
-    <!-- Social Proof -->
-    <section id="reviews" class="py-20 md:py-32 bg-brand-50 border-y border-brand-200/40">
+    <!-- Diferença -->
+    <section id="different" class="py-24 bg-white">
         <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16 reveal">
-                <h2 class="font-display text-[32px] md:text-[48px] font-extrabold text-brand-950 mb-5 tracking-tight">
-                    Real Feedback from Irish Customers
-                </h2>
-                <div class="flex justify-center gap-1 text-[#FFB800] text-xl mb-2">
-                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <h2 class="font-display text-[32px] md:text-[48px] font-black text-brand-950 text-center mb-16 tracking-tighter reveal">
+                Why AutoBrush Is Different
+            </h2>
+
+            <div class="grid md:grid-cols-2 gap-12 items-center max-w-5xl mx-auto">
+                <div class="bg-slate-50 p-10 rounded-[40px] reveal" style="transition-delay: 100ms">
+                    <h4 class="font-display font-black text-slate-400 uppercase tracking-widest text-sm mb-6">Traditional Brushing</h4>
+                    <ul class="space-y-4 text-brand-700">
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-circle-minus mt-1 text-slate-400"></i> Clean one tooth at a time</li>
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-circle-minus mt-1 text-slate-400"></i> Require perfect technique</li>
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-circle-minus mt-1 text-slate-400"></i> Often cause gum recession</li>
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-circle-minus mt-1 text-slate-400"></i> Miss the gum line entirely</li>
+                    </ul>
                 </div>
-                <p class="text-brand-600 font-medium">Over 1,400 verified 5-star reviews</p>
+
+                <div class="bg-blue-50 p-10 rounded-[40px] border-2 border-blue-200 shadow-xl reveal" style="transition-delay: 200ms">
+                    <h4 class="font-display font-black text-blue-600 uppercase tracking-widest text-sm mb-6">The AutoBrush Way</h4>
+                    <ul class="space-y-4 text-brand-950 font-bold">
+                        <li class="flex items-start gap-3 text-blue-700"><i class="fa-solid fa-circle-plus mt-1"></i> Cleans all teeth simultaneously</li>
+                        <li class="flex items-start gap-3 text-blue-700"><i class="fa-solid fa-circle-plus mt-1"></i> Optimized pressure & angle (BASS)</li>
+                        <li class="flex items-start gap-3 text-blue-700"><i class="fa-solid fa-circle-plus mt-1"></i> Ultra-soft medical-grade bristles</li>
+                        <li class="flex items-start gap-3 text-blue-700"><i class="fa-solid fa-circle-plus mt-1"></i> 20X better gumline cleaning</li>
+                    </ul>
+                </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Características -->
+    <section id="features" class="py-24 bg-brand-950 text-white overflow-hidden">
+        <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="reveal">
+                    <h2 class="font-display text-[40px] md:text-[52px] font-black leading-none mb-10 tracking-tighter">
+                        Designed for <br> <span class="text-accent-500">Modern Life.</span>
+                    </h2>
+                    
+                    <div class="grid gap-8">
+                        <div class="flex gap-6">
+                            <div class="w-12 h-12 bg-accent-500/20 rounded-2xl flex items-center justify-center shrink-0 border border-accent-500/30">
+                                <i class="fa-solid fa-clock text-accent-500"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-display font-bold text-lg mb-2">30-Second Full Clean</h4>
+                                <p class="text-brand-400 text-sm">Save time every single day — without sacrificing results.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-6">
+                            <div class="w-12 h-12 bg-accent-500/20 rounded-2xl flex items-center justify-center shrink-0 border border-accent-500/30">
+                                <i class="fa-solid fa-circle-notch text-accent-500"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-display font-bold text-lg mb-2">360° Simultaneous Coverage</h4>
+                                <p class="text-brand-400 text-sm">No missed spots. No uneven brushing. Perfect coverage every time.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-6">
+                            <div class="w-12 h-12 bg-accent-500/20 rounded-2xl flex items-center justify-center shrink-0 border border-accent-500/30">
+                                <i class="fa-solid fa-wand-magic-sparkles text-accent-500"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-display font-bold text-lg mb-2">LED Whitening Technology</h4>
+                                <p class="text-brand-400 text-sm">Blue light supports stain reduction from coffee, tea & wine.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative reveal lg:translate-x-12" style="transition-delay: 200ms">
+                    <div class="absolute inset-0 bg-accent-500/30 blur-[120px] rounded-full"></div>
+                    <div class="bg-brand-900 border border-brand-800 p-8 rounded-[40px] relative z-10">
+                        <h4 class="font-display font-black text-accent-500 uppercase text-xs mb-4 tracking-widest">Gum Protection Mode</h4>
+                        <p class="text-brand-100 text-[16px] leading-relaxed mb-6">
+                            Red light therapy + ultra-soft bristles help prevent irritation and support tissue health while you clean.
+                        </p>
+                        <div class="flex gap-2">
+                            <div class="h-1 w-full bg-accent-500 rounded-full"></div>
+                            <div class="h-1 w-1/2 bg-brand-800 rounded-full"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feedback -->
+    <section id="reviews" class="py-24 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+            <h2 class="font-display text-[32px] md:text-[48px] font-black text-brand-950 text-center mb-16 tracking-tighter reveal">
+                Real U.S. Feedback
+            </h2>
 
             <div class="grid md:grid-cols-3 gap-8">
-                <!-- Review 1 -->
-                <div class="bg-white p-8 rounded-[2.5rem] shadow-sm border border-brand-200/50 flex flex-col reveal" style="transition-delay: 100ms">
-                    <div class="flex text-[#FFB800] mb-6 text-xs gap-0.5"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-                    <p class="text-brand-700 text-[15px] mb-8 leading-relaxed italic flex-grow">
-                        "The evening bloating in Dublin used to be constant after work meals. After starting Ozalyn, my digestion feels lighter and I don't finish the day as swollen."
+                <!-- Michael -->
+                <div class="bg-white p-10 rounded-[40px] shadow-sm flex flex-col reveal" style="transition-delay: 100ms">
+                    <div class="flex text-yellow-400 mb-6 text-xs gap-1"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    <p class="text-brand-700 text-[15px] mb-10 leading-relaxed italic flex-grow">
+                        “My gums stopped bleeding after the first week. I didn’t realize how poorly I was brushing before.”
                     </p>
-                    <div class="flex items-center gap-4 border-t border-brand-100 pt-6">
-                        <div class="w-12 h-12 bg-brand-100 rounded-full flex items-center justify-center text-brand-950 font-bold">S</div>
+                    <div class="flex items-center gap-4 border-t border-slate-100 pt-6">
+                        <div class="w-10 h-10 bg-slate-900 rounded-full flex items-center justify-center text-white font-bold text-xs uppercase">MR</div>
                         <div>
-                            <p class="font-bold text-brand-950">Siobhan M.</p>
-                            <p class="text-[11px] text-brand-500 uppercase tracking-wider font-bold">Dublin, IE</p>
+                            <p class="font-black text-brand-950 text-xs uppercase tracking-widest">Michael R.</p>
+                            <p class="text-[10px] text-brand-500 font-bold uppercase tracking-widest">California, USA</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- Review 2 -->
-                <div class="bg-white p-8 rounded-[2.5rem] shadow-sm border border-brand-200/50 flex flex-col reveal" style="transition-delay: 200ms">
-                    <div class="flex text-[#FFB800] mb-6 text-xs gap-0.5"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-                    <p class="text-brand-700 text-[15px] mb-8 leading-relaxed italic flex-grow">
-                        "I wanted something gentle and science-based, not another crash diet pill. My gut feels more settled and my clothes fit more comfortably again."
+                <!-- Lauren -->
+                <div class="bg-white p-10 rounded-[40px] shadow-sm flex flex-col reveal" style="transition-delay: 200ms">
+                    <div class="flex text-yellow-400 mb-6 text-xs gap-1"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    <p class="text-brand-700 text-[15px] mb-10 leading-relaxed italic flex-grow">
+                        “30 seconds and I’m done. It feels like I just left the dentist. My dental visits are so much faster now.”
                     </p>
-                    <div class="flex items-center gap-4 border-t border-brand-100 pt-6">
-                        <div class="w-12 h-12 bg-brand-100 rounded-full flex items-center justify-center text-brand-950 font-bold">L</div>
+                    <div class="flex items-center gap-4 border-t border-slate-100 pt-6">
+                        <div class="w-10 h-10 bg-slate-900 rounded-full flex items-center justify-center text-white font-bold text-xs uppercase">LD</div>
                         <div>
-                            <p class="font-bold text-brand-950">Liam O.</p>
-                            <p class="text-[11px] text-brand-500 uppercase tracking-wider font-bold">Galway, IE</p>
+                            <p class="font-black text-brand-950 text-xs uppercase tracking-widest">Lauren D.</p>
+                            <p class="text-[10px] text-brand-500 font-bold uppercase tracking-widest">Texas, USA</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- Review 3 -->
-                <div class="bg-white p-8 rounded-[2.5rem] shadow-sm border border-brand-200/50 flex flex-col reveal" style="transition-delay: 300ms">
-                    <div class="flex text-[#FFB800] mb-6 text-xs gap-0.5"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-                    <p class="text-brand-700 text-[15px] mb-8 leading-relaxed italic flex-grow">
-                        "The formula feels very easy on my system. My digestion improved first, and then I noticed better control over cravings during the day."
+                <!-- Amanda -->
+                <div class="bg-white p-10 rounded-[40px] shadow-sm flex flex-col reveal" style="transition-delay: 300ms">
+                    <div class="flex text-yellow-400 mb-6 text-xs gap-1"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    <p class="text-brand-700 text-[15px] mb-10 leading-relaxed italic flex-grow">
+                        “My kids actually enjoy brushing now. That alone makes it worth it. No more bedtime battles over the toothbrush!”
                     </p>
-                    <div class="flex items-center gap-4 border-t border-brand-100 pt-6">
-                        <div class="w-12 h-12 bg-brand-100 rounded-full flex items-center justify-center text-brand-950 font-bold">C</div>
+                    <div class="flex items-center gap-4 border-t border-slate-100 pt-6">
+                        <div class="w-10 h-10 bg-slate-900 rounded-full flex items-center justify-center text-white font-bold text-xs uppercase">AK</div>
                         <div>
-                            <p class="font-bold text-brand-950">Ciara D.</p>
-                            <p class="text-[11px] text-brand-500 uppercase tracking-wider font-bold">Cork, IE</p>
+                            <p class="font-black text-brand-950 text-xs uppercase tracking-widest">Amanda K.</p>
+                            <p class="text-[10px] text-brand-500 font-bold uppercase tracking-widest">Colorado, USA</p>
                         </div>
                     </div>
                 </div>
@@ -340,96 +415,100 @@
     </section>
 
     <!-- FAQ Section -->
-    <section id="faq" class="py-20 md:py-32 bg-white">
+    <section id="faq" class="py-24 bg-white">
         <div class="max-w-3xl mx-auto px-5 sm:px-6 lg:px-8">
-            <h2 class="font-display text-[32px] md:text-[42px] font-extrabold text-brand-950 text-center mb-16 tracking-tight reveal">
-                Frequently Asked Questions
+            <h2 class="font-display text-[32px] md:text-[48px] font-black text-brand-950 text-center mb-16 tracking-tighter reveal">
+                Common Questions
             </h2>
 
             <div class="space-y-4">
-                <div class="faq-item border border-brand-200 rounded-2xl bg-white overflow-hidden cursor-pointer shadow-sm reveal" style="transition-delay: 100ms">
+                <div class="faq-item border border-slate-200 rounded-2xl bg-white overflow-hidden cursor-pointer reveal" style="transition-delay: 100ms">
                     <div class="faq-question flex justify-between items-center p-6" onclick="toggleFaq(this)">
-                        <h4 class="font-display font-bold text-brand-950 text-[16px]">How quickly will I receive my order in Ireland?</h4>
+                        <h4 class="font-display font-bold text-brand-950 text-[16px]">How is AutoBrush different from regular electric toothbrushes?</h4>
                         <i class="fa-solid fa-chevron-down faq-icon text-accent-500 text-sm transition-transform duration-300"></i>
                     </div>
-                    <div class="faq-answer px-6 bg-brand-50 text-brand-700 text-[15px] leading-relaxed border-t border-brand-100">
-                        <p>Orders are dispatched from the Netherlands and delivered via tracked express shipping, typically within 3–5 working days. No additional customs fees apply.</p>
+                    <div class="faq-answer px-6 bg-slate-50 text-brand-700 text-[15px] leading-relaxed">
+                        <p>AutoBrush uses a patented U-shaped nylon brush head and ADA-accepted brushing technique to clean every tooth simultaneously, rather than one-by-one.</p>
                     </div>
                 </div>
-                <div class="faq-item border border-brand-200 rounded-2xl bg-white overflow-hidden cursor-pointer shadow-sm reveal" style="transition-delay: 200ms">
+                <div class="faq-item border border-slate-200 rounded-2xl bg-white overflow-hidden cursor-pointer reveal" style="transition-delay: 200ms">
                     <div class="faq-question flex justify-between items-center p-6" onclick="toggleFaq(this)">
-                        <h4 class="font-display font-bold text-brand-950 text-[16px]">How should I take Ozalyn for best results?</h4>
+                        <h4 class="font-display font-bold text-brand-950 text-[16px]">Is it safe for sensitive gums?</h4>
                         <i class="fa-solid fa-chevron-down faq-icon text-accent-500 text-sm transition-transform duration-300"></i>
                     </div>
-                    <div class="faq-answer px-6 bg-brand-50 text-brand-700 text-[15px] leading-relaxed border-t border-brand-100">
-                        <p>Take two capsules once daily, ideally 15–30 minutes before your main meal, with a full glass of water (around 500 ml) for optimal absorption.</p>
+                    <div class="faq-answer px-6 bg-slate-50 text-brand-700 text-[15px] leading-relaxed">
+                        <p>Yes. It includes a dedicated sensitive mode, ultra-soft medical-grade bristles, and red light gum support to prevent irritation.</p>
                     </div>
                 </div>
-                <div class="faq-item border border-brand-200 rounded-2xl bg-white overflow-hidden cursor-pointer shadow-sm reveal" style="transition-delay: 300ms">
+                <div class="faq-item border border-slate-200 rounded-2xl bg-white overflow-hidden cursor-pointer reveal" style="transition-delay: 300ms">
                     <div class="faq-question flex justify-between items-center p-6" onclick="toggleFaq(this)">
-                        <h4 class="font-display font-bold text-brand-950 text-[16px]">Is this a recurring subscription?</h4>
+                        <h4 class="font-display font-bold text-brand-950 text-[16px]">Does it really work in 30 seconds?</h4>
                         <i class="fa-solid fa-chevron-down faq-icon text-accent-500 text-sm transition-transform duration-300"></i>
                     </div>
-                    <div class="faq-answer px-6 bg-brand-50 text-brand-700 text-[15px] leading-relaxed border-t border-brand-100">
-                        <p>No. All purchases on our official site are one-time payments. We never charge your card without your explicit action for a new order.</p>
+                    <div class="faq-answer px-6 bg-slate-50 text-brand-700 text-[15px] leading-relaxed">
+                        <p>Yes. Because it brushes all teeth at the exact same time, clinical testing confirms that a 30-second cycle provides full-mouth cleaning equivalent to 2 minutes of traditional brushing.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-brand-950 text-brand-400 py-20 mt-auto">
+    <!-- Final CTA -->
+    <section class="py-24 bg-brand-950 relative overflow-hidden">
+        <div class="absolute inset-0 bg-accent-500/5 blur-[100px] rounded-full"></div>
+        <div class="max-w-4xl mx-auto px-5 text-center relative z-10">
+            <h2 class="font-display text-[40px] md:text-[60px] font-black text-white leading-none mb-8 tracking-tighter reveal">
+                Feel 100% Confident <br> in Your Smile.
+            </h2>
+            <div class="flex flex-col sm:flex-row justify-center gap-4 reveal" style="transition-delay: 200ms">
+                <a href="https://www.fasttrack37.com/PM7HK3TH/2SS8XSX7/" class="btn-magnetic bg-accent-500 text-white font-black py-5 px-10 rounded-2xl tracking-widest uppercase text-sm shadow-2xl">
+                    GET AUTOBRUSH NOW
+                </a>
+                <a href="https://www.fasttrack37.com/PM7HK3TH/2SS8XSX7/?uid=50959" class="btn-magnetic bg-white/10 text-white border border-white/20 font-black py-5 px-10 rounded-2xl tracking-widest uppercase text-sm backdrop-blur-md">
+                    READ HOW IT WORKS
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="bg-white text-brand-600 py-20">
         <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
             <div class="flex flex-col md:flex-row justify-between items-center gap-10 mb-16">
                 <div class="text-center md:text-left">
-                    <span class="font-display text-3xl font-extrabold tracking-tight text-white">
-                        OZALYN<sup class="text-[12px] font-bold text-accent-500">™</sup>
+                    <span class="font-display text-2xl font-black tracking-tighter text-brand-950 uppercase italic">
+                        AutoBrush<sup class="text-[10px] text-accent-500">™</sup>
                     </span>
-                    <p class="text-[13px] text-brand-500 mt-2 font-medium">Science-Led Microbiome & Metabolic Support</p>
+                    <p class="text-[11px] font-bold text-brand-400 mt-1 uppercase tracking-widest">The Future of Dental Care</p>
                 </div>
 
-                <div class="flex flex-wrap justify-center gap-8 text-[14px] font-semibold">
-                    <a href="#" onclick="openModal('privacyModal'); return false;" class="hover:text-white transition">Privacy</a>
-                    <a href="#" onclick="openModal('termsModal'); return false;" class="hover:text-white transition">Terms</a>
-                    <a href="#" onclick="openModal('returnModal'); return false;" class="hover:text-white transition">Returns</a>
-                    <a href="#" onclick="openModal('shippingModal'); return false;" class="hover:text-white transition">Shipping</a>
+                <div class="flex flex-wrap justify-center gap-8 text-[12px] font-black uppercase tracking-widest">
+                    <a href="#" class="hover:text-brand-950 transition">Privacy</a>
+                    <a href="#" class="hover:text-brand-950 transition">Terms</a>
+                    <a href="#" class="hover:text-brand-950 transition">Returns</a>
+                    <a href="#" class="hover:text-brand-950 transition">Shipping</a>
                 </div>
             </div>
 
-            <div class="border-t border-white/10 pt-12 text-center">
-                <div class="max-w-4xl mx-auto text-[11px] leading-relaxed opacity-50 space-y-4 mb-12">
-                    <p><strong>Health Disclaimer:</strong> These statements have not been evaluated by the FSAI. This product is a food supplement and is not intended to diagnose, treat, cure, or prevent any disease. Results may vary between individuals.</p>
-                    <p>&copy; 2026 Ozalyn Official. All rights reserved.</p>
+            <div class="border-t border-slate-100 pt-10 text-center">
+                <p class="max-w-4xl mx-auto text-[11px] leading-relaxed text-slate-400 mb-8">
+                    AutoBrush is ADA-accepted and supported by clinical studies. Results may vary. Always follow recommended dental hygiene practices and consult your dentist for specific oral health needs.
+                </p>
+                <div class="flex justify-center gap-6 opacity-40 grayscale mb-6">
+                    <i class="fa-brands fa-cc-visa text-2xl"></i>
+                    <i class="fa-brands fa-cc-mastercard text-2xl"></i>
+                    <i class="fa-brands fa-cc-amex text-2xl"></i>
+                    <i class="fa-brands fa-apple-pay text-2xl"></i>
                 </div>
-                <div class="flex justify-center gap-6 opacity-20 text-3xl">
-                    <i class="fa-brands fa-cc-visa"></i>
-                    <i class="fa-brands fa-cc-mastercard"></i>
-                    <i class="fa-brands fa-cc-paypal"></i>
-                    <i class="fa-brands fa-cc-apple-pay"></i>
-                </div>
+                <p class="text-[10px] font-black tracking-widest uppercase text-slate-400">&copy; 2026 AutoBrush™ Official U.S. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
 
-    <!-- Modals -->
-    <div id="privacyModal" class="modal" onclick="closeModals()">
-        <div class="bg-white rounded-3xl w-full max-w-lg overflow-hidden shadow-2xl" onclick="event.stopPropagation()">
-            <div class="p-6 border-b border-brand-100 flex justify-between items-center bg-brand-50">
-                <h3 class="font-display font-bold text-brand-950 text-lg">Privacy Policy</h3>
-                <button onclick="closeModals()" class="text-brand-400 hover:text-brand-950 transition"><i class="fa-solid fa-xmark"></i></button>
-            </div>
-            <div class="p-8 max-h-[60vh] overflow-y-auto text-brand-700 text-sm leading-relaxed space-y-4">
-                <p>We respect your privacy. All personal data collected during the order process is used exclusively for fulfillment and customer support.</p>
-                <p>We use industry-standard SSL encryption to protect your data. We do not sell or lease your personal information to third parties.</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- Script Section -->
+    <!-- Scripts -->
     <script>
-        // Intersection Observer for Reveal Animations
-        const revealObserver = new IntersectionObserver((entries) => {
+        // Reveal no Scroll
+        const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('revealed');
@@ -437,37 +516,15 @@
             });
         }, { threshold: 0.1 });
 
-        document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-        // FAQ Toggle Functionality
+        // FAQ Toggle
         function toggleFaq(element) {
             const item = element.parentElement;
             const wasActive = item.classList.contains('active');
-            
-            // Close all others
             document.querySelectorAll('.faq-item').forEach(faq => faq.classList.remove('active'));
-            
-            // Toggle current
-            if (!wasActive) {
-                item.classList.add('active');
-            }
+            if (!wasActive) item.classList.add('active');
         }
-
-        // Modal Logic
-        function openModal(id) {
-            document.getElementById(id).classList.add('active');
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeModals() {
-            document.querySelectorAll('.modal').forEach(m => m.classList.remove('active'));
-            document.body.style.overflow = '';
-        }
-
-        // Handle Escape key for modals
-        window.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') closeModals();
-        });
     </script>
 </body>
 
